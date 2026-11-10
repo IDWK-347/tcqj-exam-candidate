@@ -1,0 +1,21 @@
+{
+  "images": [
+    {
+      "image_id": "03.png",
+      "file": "03.png",
+      "sha256": "387537a8f8998be745a54217aef2430b4dd22da2c09e888f451aa06f1b1c3f96"
+    },
+    {
+      "image_id": "05.png",
+      "file": "05.png",
+      "sha256": "397e12afcd9fdd7983862cf017da6ae818df1b822f33061a42f79f15410a360c"
+    },
+    {
+      "image_id": "07.png",
+      "file": "07.png",
+      "sha256": "0801efa4d3667ff660635e4db801d9e1c73850c8b156136f54d28f4ac6299fb2"
+    }
+  ],
+  "source": "handheld_capture_7_views",
+  "source_basis": "Exam fixture. Still-life scene photographed from multiple viewpoints. No calibrated geometry ground truth."
+}

@@ -1,0 +1,69 @@
+{
+  "images": [
+    {
+      "image_id": "01.png",
+      "file": "01.png",
+      "sha256": "663aa849124e29811b442b21f9db3f248ee604b13a7861ef4ff192b5eff9581a"
+    },
+    {
+      "image_id": "02.png",
+      "file": "02.png",
+      "sha256": "24b75da0446964771ec5a55d3dfd4a5394adad41e303153e0d96d2281d4da911"
+    },
+    {
+      "image_id": "03.png",
+      "file": "03.png",
+      "sha256": "387537a8f8998be745a54217aef2430b4dd22da2c09e888f451aa06f1b1c3f96"
+    },
+    {
+      "image_id": "04.png",
+      "file": "04.png",
+      "sha256": "46d118cea07d7d7c68713a90bbf3d92a642f516807d127c7f926f6926c5b5d15"
+    },
+    {
+      "image_id": "05.png",
+      "file": "05.png",
+      "sha256": "397e12afcd9fdd7983862cf017da6ae818df1b822f33061a42f79f15410a360c"
+    },
+    {
+      "image_id": "06.png",
+      "file": "06.png",
+      "sha256": "26a5d4ea05addbfc3655945cd6ff8b2061ada4f99a4212cf9e3aedd2891a285f"
+    },
+    {
+      "image_id": "07.png",
+      "file": "07.png",
+      "sha256": "0801efa4d3667ff660635e4db801d9e1c73850c8b156136f54d28f4ac6299fb2"
+    }
+  ],
+  "source": "handheld_capture_7_views",
+  "source_basis": "Exam fixture. Still-life scene photographed from multiple viewpoints. No calibrated geometry ground truth.",
+  "pairing": {
+    "explicit_edges": [
+      [
+        "01.png",
+        "02.png"
+      ],
+      [
+        "02.png",
+        "03.png"
+      ],
+      [
+        "03.png",
+        "04.png"
+      ],
+      [
+        "04.png",
+        "05.png"
+      ],
+      [
+        "05.png",
+        "06.png"
+      ],
+      [
+        "06.png",
+        "07.png"
+      ]
+    ]
+  }
+}

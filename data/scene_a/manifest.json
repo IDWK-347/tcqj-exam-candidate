@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "image_id": "01.png",
+      "file": "01.png",
+      "sha256": "faac2229960a9798a19e8fd6d4b3aa97dc75304eb97380ff4dc8bbb7b4da720a"
+    },
+    {
+      "image_id": "02.png",
+      "file": "02.png",
+      "sha256": "935618e17b27a4f48166e9354dd37c630fcf55082850024c559d4dc5e443cc2b"
+    }
+  ],
+  "source": "ai_generated_rgb_candidate",
+  "source_basis": "Exam fixture. Still-life scene photographed from multiple viewpoints. No calibrated geometry ground truth."
+}

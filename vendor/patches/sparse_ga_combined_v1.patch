@@ -1,0 +1,49 @@
+--- a/vendor/mast3r/mast3r/cloud_opt/sparse_ga.py
++++ b/vendor/mast3r/mast3r/cloud_opt/sparse_ga.py
+@@ -431,6 +431,11 @@
+     def optimize_loop(loss_func, lr_base, niter, pix_loss, lr_end=0):
+         # create optimizer
+         params = pps + log_focals + quats + trans + log_sizes + core_depth
++        # Keep the first slot for each parameter object; view references stay shared.
++        unique_params = {}
++        for param in params:
++            unique_params.setdefault(id(param), param)
++        params = list(unique_params.values())
+         optimizer = torch.optim.Adam(params, lr=1, weight_decay=0, betas=(0.9, 0.9))
+         ploss = pix_loss if 'meta' in repr(pix_loss) else (lambda a: pix_loss)
+ 
+@@ -454,16 +459,22 @@
+                 for i in range(len(imgs)):
+                     quats[i].data[:] /= quats[i].data.norm()
+ 
+-                loss = float(loss)
++                loss = float(loss.detach())
+                 if loss != loss:
+                     break  # NaN loss
+                 bar.set_postfix_str(f'{lr=:.4f}, {loss=:.3f}')
+                 bar.update(1)
+ 
++        # Capture all fields after the final Adam step and quaternion normalization.
++        with torch.no_grad():
++            K, (w2cam, cam2w), depthmaps = make_K_cam_depth(log_focals, pps, trans, quats, log_sizes, core_depth)
++            pts3d = make_pts3d(anchors, K, cam2w, depthmaps, base_focals=base_focals)
++            if niter:
++                loss = float(loss_func(K, w2cam, pts3d, pix_loss) + loss_dust3r_w * loss_dust3r(cam2w, pts3d, lossd))
+         if niter:
+             print(f'>> final loss = {loss}')
+-        return dict(intrinsics=K.detach(), cam2w=cam2w.detach(),
+-                    depthmaps=[d.detach() for d in depthmaps], pts3d=[p.detach() for p in pts3d])
++        return dict(intrinsics=K.detach().clone(), cam2w=cam2w.detach().clone(),
++                    depthmaps=[d.detach().clone() for d in depthmaps], pts3d=[p.detach().clone() for p in pts3d])
+ 
+     # at start, don't optimize 3d points
+     for i, img in enumerate(imgs):
+@@ -490,7 +501,7 @@
+         # refinement with 2d reproj
+         res_fine = optimize_loop(loss_2d, lr_base=lr2, niter=niter2, pix_loss=loss2)
+ 
+-    K = make_K_cam_depth(log_focals, pps, None, None, None, None)
++    K = (res_fine or res_coarse)['intrinsics']
+     if shared_intrinsics:
+         print('Final focal (shared) = ', to_numpy(K[0, 0, 0]).round(2))
+     else:

@@ -1,0 +1,9 @@
+schema_version: 1
+extends:
+- ../base.yaml
+- ../t4.yaml
+scene:
+  id: scene_c
+  manifest: ../../data/scene_c/manifest.json
+output:
+  root: ../../outputs

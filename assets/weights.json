@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "file": "/workspace/OLD-INSTANCE/checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+  "download_url": "https://download.europe.naverlabs.com/ComputerVision/MASt3R/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "license_notice": "../vendor/mast3r/CHECKPOINTS_NOTICE"
+}

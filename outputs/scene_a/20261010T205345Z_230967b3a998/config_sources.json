@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "semantic_hash": "79fcad59b1a543ce4ba845cd3950ad9037d6e3c69afd756f524b6d15a5323ab8",
+  "resource_ids": {
+    "backend.weights_manifest": "assets/weights.json",
+    "scene.manifest": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/data/manifest.json",
+    "output.root": "outputs"
+  },
+  "load_order": [
+    "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml"
+  ],
+  "fields": {
+    "schema_version": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 1
+      }
+    ],
+    "preprocess.long_edge": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 512
+      }
+    ],
+    "preprocess.square_ok": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": false
+      }
+    ],
+    "pairing.strategy": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "complete"
+      }
+    ],
+    "backend.name": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "mast3r_sparse_ga"
+      }
+    ],
+    "backend.weights_manifest": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "/workspace/tcqj-reconlab-golden/assets/weights.json"
+      }
+    ],
+    "backend.shared_intrinsics": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": false
+      }
+    ],
+    "backend.subsample": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 8
+      }
+    ],
+    "backend.coarse_iterations": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 100
+      }
+    ],
+    "backend.refine_iterations": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 100
+      }
+    ],
+    "backend.coarse_lr": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 0.07
+      }
+    ],
+    "backend.refine_lr": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 0.01
+      }
+    ],
+    "backend.matching_conf_thr": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": 0.0
+      }
+    ],
+    "runtime.device": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "cuda"
+      }
+    ],
+    "runtime.precision": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "fp32"
+      }
+    ],
+    "scene.id": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "scene_02_ai_candidate"
+      }
+    ],
+    "scene.manifest": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "/workspace/tcqj-reconlab-golden/work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/data/manifest.json"
+      }
+    ],
+    "output.root": [
+      {
+        "source": "work/ai_scene_02_candidates/20261010T204756Z_fd1ef9a09203/config.yaml",
+        "raw_value": "/workspace/tcqj-reconlab-golden/outputs"
+      }
+    ]
+  }
+}

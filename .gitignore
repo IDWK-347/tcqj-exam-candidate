@@ -1,0 +1,6 @@
+checkpoints/
+.venv.orig/
+*.orig
+*.bak
+__pycache__/
+*.pyc

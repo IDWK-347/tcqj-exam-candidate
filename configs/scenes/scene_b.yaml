@@ -1,0 +1,13 @@
+schema_version: 1
+extends:
+- ../base.yaml
+- ../t4.yaml
+scene:
+  id: scene_b
+  manifest: ../../data/scene_b/manifest.json
+pairing:
+  strategy: explicit
+backend:
+  subsample: 4
+output:
+  root: ../../outputs

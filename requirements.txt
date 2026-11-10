@@ -1,0 +1,13 @@
+# NOTE: this file intentionally declares no package index.
+# The default PyPI torch wheel is the CPU build.
+torch>=2.1
+torchvision>=0.16
+numpy
+scipy
+Pillow
+opencv-python-headless
+einops
+roma
+tqdm
+packaging
+huggingface-hub

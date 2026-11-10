@@ -1,0 +1,33 @@
+[
+  {
+    "project": "MASt3R",
+    "commit": "f5209afc300cec36239a7ac992263f36847bbba0",
+    "directory": "vendor/mast3r",
+    "local_patches": [
+      {
+        "patch_id": "sparse_ga_combined_v1",
+        "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+        "base_sha256": "d811614a10fe7920fb41285c3b8b9162b38a5e1ea68823f76383a2f209d3a49f",
+        "patched_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+        "patch_file": "vendor/patches/sparse_ga_combined_v1.patch",
+        "patch_sha256": "2936f21e1897b64e069ffc51b35d6fb7e4891f2abbc105ad19bcde9af0966828",
+        "changes": [
+          "post_update_complete_geometry_and_terminal_loss_snapshot",
+          "focal_log_uses_selected_return",
+          "detached_scalar_loss_logging_after_backward",
+          "Adam_parameter_identity_first_occurrence"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "DUSt3R",
+    "commit": "3cc8c88c413bb9e34c41db0e0eef99c2ee010b12",
+    "directory": "vendor/mast3r/dust3r"
+  },
+  {
+    "project": "CroCo",
+    "commit": "d7de0705845239092414480bd829228723bf20de",
+    "directory": "vendor/mast3r/dust3r/croco"
+  }
+]
