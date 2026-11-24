@@ -1,6 +1,6 @@
 # 多视角三维重建工程｜技术岗考核
 
-**时长 6 小时。允许使用任何 AI 工具。**
+**时长两天。允许使用任何 AI 工具。**
 
 ---
 
@@ -38,12 +38,7 @@ python scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --dry-
 
 验证：命令正常返回；去掉 `--dry-run` 再执行一次，产出 `artifacts/scene.ply`。
 
-交付 `ENVIRONMENT.md`：
-
-- 首次执行的确切报错（贴原文）
-- 问题定位在哪一层（解释器 / 依赖 / 路径 / 代码），依据是什么
-- 你改动了什么、没有改动什么、为什么不需要改动更多
-- 修复后如何验证
+交付 `ENVIRONMENT.md`：环境配置记录（如遇到问题请写出解决步骤）
 
 ### 2. 建立基线
 
@@ -104,7 +99,7 @@ python scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --dry-
 在分支 `submission/<你的名字>` 上提交：
 
 ```
-ENVIRONMENT.md    环境问题与修复过程
+ENVIRONMENT.md    环境记录
 BASELINE.md       scene_a 的基线观测记录
 PREDICTIONS.md    每次关键实验前的预测（可边做边追加）
 DIAGNOSIS.md      scene_b 的诊断过程与结论
@@ -121,7 +116,7 @@ SUBMISSION.md     复现步骤、改动说明、方案边界
 **允许**
 
 - 使用任何 AI 对话工具
-- 查阅公开文档、MASt3R / DUSt3R 上游源码
+- 查阅公开文档
 - 重建虚拟环境、修改 requirements、修改代码、重启环境
 
 **不允许**
@@ -131,12 +126,3 @@ SUBMISSION.md     复现步骤、改动说明、方案边界
 - 删除 `scene_b` 的图片使其「跑通」
 - 在报告中写入未实际运行得到的数字
 
-## 提交后交流
-
-提交后有 15 分钟交流，围绕以下内容提问：
-
-1. 报告中某个数字的来源
-2. 某个被排除假设的排除依据
-3. 方案适用的边界
-
-答案应来自你实际执行过的操作。
