@@ -12,7 +12,7 @@
 ## 关键资源
 
 - 工程：当前工作区，入口为 `scripts/run_reconstruction.py`
-- 权重：`checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth`（已预置，不要联网下载）
+- 权重：需自行下载后放入 `checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth`，下载地址与 SHA256 见 `assets/weights.json`
 - 数据：`data/scene_a/`（2 图）、`data/scene_b/`（7 图）、`data/scene_c/`（3 图）
 - 场景配置：`configs/scenes/scene_a.yaml`、`scene_b.yaml`、`scene_c.yaml`
 - 公共参数：`configs/base.yaml`
