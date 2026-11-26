@@ -56,7 +56,7 @@ site-packages 只有 pip/setuptools，无法启动；重建成本高于收益。
 
 | 须知条目 | 要求 | 本工程状态 | 证据 |
 |---|---|---|---|
-| 1. 克隆并建分支 | 从 `main` 拉出 `submission/<名字>` | ✅ 当前分支 `submission/peixinnan`（分支点 `ac0ba43`；交付提交 `bef2191`，已推到 fork） | `git branch -vv` / `git ls-remote --heads fork` |
+| 1. 克隆并建分支 | 从 `main` 拉出 `submission/<名字>` | ✅ 当前分支 `submission/peixinnan`（分支点 `ac0ba43`；已推到 fork，以分支 tip 为准） | `git branch -vv` / `git ls-remote --heads fork` |
 | 2. 下载并校验权重 | 2754910614 字节；SHA256 `e28f91…568eb2`；放入 `checkpoints/` | ✅ 两项同时吻合 | `ENVIRONMENT.md` §3 |
 | 3. 改 `assets/weights.json` 的路径 | 须知示例写的是绝对路径 | ⚠️ 按代码契约改为**相对路径**，解析结果仍是 `/workspace/checkpoints/…`；`sha256` 字段未改 | `entry.py:50-52`；`ENVIRONMENT.md` §4.2 |
 
@@ -132,7 +132,7 @@ cd tcqj-exam-candidate
 git checkout submission/peixinnan
 ```
 
-> `submission/peixinnan` 已推到 fork（`IDWK-347/tcqj-exam-candidate`）的提交 `bef2191`；
+> `submission/peixinnan` 已推到 fork（`IDWK-347/tcqj-exam-candidate`），以分支 tip 为准；
 > 上游 `origin`（`Salih-Biron/tcqj-exam-candidate`）只有 `main`，没有该分支。
 > 若评审环境直接提供当前工作区，也可跳过克隆。
 
@@ -463,7 +463,7 @@ python3 tools/measure_epipolar.py --scene scene_b \
 
 ## 8. 提交清单
 
-> 本节给出最终提交的确定范围；该范围已固化为提交 `bef2191`（已 push 到 fork）。
+> 本节给出最终提交的确定范围；该范围已固化并 push 到 fork 的 `submission/peixinnan`。
 
 ### 8.1 纳入提交
 
@@ -500,5 +500,5 @@ git add assets/weights.json configs/scenes/scene_b.yaml \
 git status --short   # 确认暂存区不含 .cargo/、CLAUDE.md、kaoshengxuzhi.md
 ```
 
-> 注：本地提交 `bef2191` 已完成，并已 push 到 fork（`IDWK-347/tcqj-exam-candidate`）的
-> `submission/peixinnan`；上游 `origin` 仓库中尚未包含这些内容。
+> 注：本地提交已完成，并已 push 到 fork（`IDWK-347/tcqj-exam-candidate`）的
+> `submission/peixinnan`（以分支 tip 为准）；上游 `origin` 仓库中尚未包含这些内容。
