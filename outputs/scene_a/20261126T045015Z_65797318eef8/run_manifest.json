@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T045015Z_65797318eef8",
+  "scene_id": "scene_a",
+  "mode": "reconstruction",
+  "status": "succeeded",
+  "created_at_utc": "2026-11-26T04:50:15.544843+00:00",
+  "started_at_utc": "2026-11-26T04:50:15.557600+00:00",
+  "ended_at_utc": "2026-11-26T04:50:32.978713+00:00",
+  "provenance": {
+    "config_semantic_hash": "31791d5e5d03b9d442b92551f6c5f9ba30f6f96ce145e56604c2a74a2a56fd60",
+    "dry_run": false,
+    "normal_entry_bound": true,
+    "verification": {
+      "real_gpu_pipeline_verified": false,
+      "M2_complete": false,
+      "geometry_quality_accepted": false
+    },
+    "implementation_sources": {
+      "src/reconlab/__init__.py": "2cd385ba8f98f3ceae9482909bb9772f2977fc856030efa6ac482deb35f064a1",
+      "src/reconlab/backends/__init__.py": "e3b6687f20f041c4588be7909eaf78b77f160093cc1fe4babe49fb24b6547515",
+      "src/reconlab/backends/mast3r.py": "c6ab182a9dce9d6ed0478fcfe37e5164c59381c12ea8365569032eeef5f7eebe",
+      "src/reconlab/backends/probe.py": "ac7cde42166f3937d57b8aee5648cc5ae9aa5229441f9b7bb72251160e5ef0bd",
+      "src/reconlab/backends/sparse_io.py": "27e28dccb250b2aa5ed3517e4d30e34895a62ada25ce5aa4715d38909146e716",
+      "src/reconlab/backends/sparse_pixels.py": "ccc5c257abafa0ebfd7356bb1aa5919d6ecb33551524efdb45a3fb2aa2faf575",
+      "src/reconlab/config.py": "e4e4f4543e743ac13f9928c543abd4eb35710f2dc2b6d352800546619f42299b",
+      "src/reconlab/entry.py": "4a4ef680e08345a91d4e6ab0dbf764fb45e375b79c1b94aa416242baa5d1d5b3",
+      "src/reconlab/exporter.py": "32bd6ccb0ecb2075f75c9ff66b7f00a1e39d9292192ab7bc8878ab4d6307e600",
+      "src/reconlab/image_loader.py": "d0be4e074631017e061a61554375382c8fd4ae7675000ee70ef45c7a9aaa138c",
+      "src/reconlab/pairing.py": "0b4d526e830b817788df8e39e8d3c382164a399fd8f1ccf8b7fe03ef7b142f4c",
+      "src/reconlab/pipeline.py": "b23c2742b61ac7d9241d0a428ac95099847de756bab37fd086ce9da264ad71bd",
+      "src/reconlab/reconstruction_pipeline.py": "ec9aaec053a91300e0c6b2f22b6a636bc3fad50eb2a6576e11f78d8826f265a2",
+      "src/reconlab/results.py": "9affc2fcd4ea47c5b2b8b4ce9dcae0e84f3c1840e81915ca604a2cab3afed5c5",
+      "scripts/run_reconstruction.py": "fa38546778c363ec939364ad89b3a2113863e0ea5ee0a0bb61750ecea7558f36"
+    },
+    "environment": {
+      "python": "3.11.1 (main, Feb  6 2026, 08:59:00) [GCC 13.3.0]",
+      "executable": "/root/.pyenv/versions/3.11.1/bin/python3",
+      "platform": "Linux-6.6.117-45.14.1.tl4.x86_64-x86_64-with-glibc2.39",
+      "loaded_reconlab_files": {
+        "reconlab": "/workspace/src/reconlab/__init__.py",
+        "reconlab.config": "/workspace/src/reconlab/config.py",
+        "reconlab.pairing": "/workspace/src/reconlab/pairing.py",
+        "reconlab.entry": "/workspace/src/reconlab/entry.py",
+        "reconlab.reconstruction_pipeline": "/workspace/src/reconlab/reconstruction_pipeline.py",
+        "reconlab.pipeline": "/workspace/src/reconlab/pipeline.py"
+      }
+    },
+    "git": {
+      "status": "available",
+      "head": "ac0ba43260f49edc192253c724d478473b639201",
+      "branch": "submission/peixinnan",
+      "working_tree_status": "M assets/weights.json\n M configs/scenes/scene_b.yaml\n?? .cargo/\n?? BASELINE.md\n?? CLAUDE.md\n?? DIAGNOSIS.md\n?? ENVIRONMENT.md\n?? EXPERIMENTS.md\n?? PREDICTIONS.md\n?? SUBMISSION.md\n?? kaoshengxuzhi.md\n?? outputs/scene_a/20261126T035611Z_077779e0fdea/\n?? outputs/scene_a/20261126T041729Z_4b2acf11e162/\n?? outputs/scene_a/20261126T041937Z_581439180005/\n?? outputs/scene_a/20261126T042110Z_7904ef813fba/\n?? outputs/scene_a/20261126T042248Z_3d7558c62c88/\n?? outputs/scene_a/20261126T045015Z_65797318eef8/\n?? outputs/scene_b/\n?? tools/"
+    },
+    "preflight": {
+      "schema_version": 1,
+      "check": "configured_reconstruction_preflight",
+      "run_id": "20261126T045015Z_65797318eef8",
+      "scene_id": "scene_a",
+      "config_semantic_hash": "31791d5e5d03b9d442b92551f6c5f9ba30f6f96ce145e56604c2a74a2a56fd60",
+      "sources": [
+        {
+          "project": "MASt3R",
+          "commit": "f5209afc300cec36239a7ac992263f36847bbba0",
+          "directory": "vendor/mast3r",
+          "local_patches": [
+            {
+              "patch_id": "sparse_ga_combined_v1",
+              "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+              "base_sha256": "d811614a10fe7920fb41285c3b8b9162b38a5e1ea68823f76383a2f209d3a49f",
+              "patched_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+              "patch_file": "vendor/patches/sparse_ga_combined_v1.patch",
+              "patch_sha256": "2936f21e1897b64e069ffc51b35d6fb7e4891f2abbc105ad19bcde9af0966828",
+              "changes": [
+                "post_update_complete_geometry_and_terminal_loss_snapshot",
+                "focal_log_uses_selected_return",
+                "detached_scalar_loss_logging_after_backward",
+                "Adam_parameter_identity_first_occurrence"
+              ]
+            }
+          ]
+        },
+        {
+          "project": "DUSt3R",
+          "commit": "3cc8c88c413bb9e34c41db0e0eef99c2ee010b12",
+          "directory": "vendor/mast3r/dust3r"
+        },
+        {
+          "project": "CroCo",
+          "commit": "d7de0705845239092414480bd829228723bf20de",
+          "directory": "vendor/mast3r/dust3r/croco"
+        }
+      ],
+      "manifest_sha256": "4a7c510d5da4fa845c516767abaeb0b8ac801ae49b4cfd5c3e2b902ea8eb7921",
+      "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+      "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+      "license_notice": "vendor/mast3r/CHECKPOINTS_NOTICE",
+      "input_provenance": "ai_generated_rgb_candidate",
+      "inputs": [
+        {
+          "file": "01.png",
+          "sha256": "faac2229960a9798a19e8fd6d4b3aa97dc75304eb97380ff4dc8bbb7b4da720a"
+        },
+        {
+          "file": "02.png",
+          "sha256": "935618e17b27a4f48166e9354dd37c630fcf55082850024c559d4dc5e443cc2b"
+        }
+      ],
+      "image_count": 2,
+      "expected_directed_pair_count": 2,
+      "expected_pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+      "image_size": 512,
+      "square_ok": false,
+      "settings": {
+        "subsample": 8,
+        "device": "cuda",
+        "lr1": 0.07,
+        "niter1": 100,
+        "lr2": 0.01,
+        "niter2": 100,
+        "matching_conf_thr": 0.0,
+        "shared_intrinsics": false
+      }
+    },
+    "processed_pixel_hash": "09c9c0d91d206e689ecb016db888a9d230b90ca3fc709f564345ba413ce4f859",
+    "pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+    "preprocessing_source": {
+      "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+      "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+    },
+    "backend_fingerprint_hash": "d6a71d687935065ffa0282f2c2c2f6830c44d08e6d0c4b8e9a7fa6b83635395f",
+    "evidence_files": {
+      "artifacts/artifacts.json": {
+        "sha256": "a2d21b7d2b4d3343621601a6d4a92ea58599cb9dc6a85b977f01ededafc1222d",
+        "bytes": 3486
+      },
+      "artifacts/cameras.json": {
+        "sha256": "0f5dab96ade6717b49db2454fd97673d0492fa6310ca8ff146a3bd78f3296fe4",
+        "bytes": 3887
+      },
+      "artifacts/point_sources.npz": {
+        "sha256": "bd073fb8c56a6ef4e9788dd67c9a17864003e34827e30ad22dd191ad1b04abbf",
+        "bytes": 62019
+      },
+      "artifacts/scene.ply": {
+        "sha256": "cd3cdc6385875a8b74e9ed79f2358460349b25403f398201ec1676fdba4d6839",
+        "bytes": 398032
+      },
+      "backend_events.jsonl": {
+        "sha256": "19fe8ea9c509bb6cb3f6a0f443ee7d1edc17a50e61030a838b86911387de54b5",
+        "bytes": 1831
+      },
+      "backend_fingerprint.json": {
+        "sha256": "cded82aa8f140dec35cd2326a5f832372836ea62d725538d543efd55041d7a15",
+        "bytes": 1428
+      },
+      "backend_result.json": {
+        "sha256": "947228e6ebcd0356646508f95605664821b454c00d860b2e826b78de73d77210",
+        "bytes": 5818
+      },
+      "config_sources.json": {
+        "sha256": "dd6424c914a64b061b31fdb3f8222671f70fae854c42bc89665c99c7fb3ad8d3",
+        "bytes": 2756
+      },
+      "image_preprocessing.json": {
+        "sha256": "38d556f575604f0a1c405d491102c8c9da09087003810d27419da1a6a5f5af74",
+        "bytes": 3079
+      },
+      "pair_graph.json": {
+        "sha256": "2e5f5be90d50494355e2c8d6391ab11da70450bd3f6c60a08ea9f07d7c0845e8",
+        "bytes": 1725
+      },
+      "preflight.json": {
+        "sha256": "7f41bda02b53060288fff98a197fc709e339059c683b02c29a188fe70c80af59",
+        "bytes": 2494
+      },
+      "reconstruction.json": {
+        "sha256": "cf932422e7ea3d42dedc4e0daad91ee924a3a4ee998c2e152acc4d8be51a91c9",
+        "bytes": 10600
+      },
+      "reconstruction_optimizer.log": {
+        "sha256": "7f397b1d19ca46fccd03a8cedbb7addaedf70030340a44a3a81ba06c1a0eb30a",
+        "bytes": 144
+      },
+      "resolved_config.yaml": {
+        "sha256": "8c9915219dbac43173da660b24c8f56071225974a27ac85fd4f2198c083a0fd3",
+        "bytes": 482
+      },
+      "standard_result.json": {
+        "sha256": "140e5db3e51a9a1ee5c93d0cca94c705dcf4647a969c20fe1e169fc0783d1e97",
+        "bytes": 2120
+      }
+    }
+  },
+  "phases": [
+    {
+      "name": "configuration",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:15.571449+00:00",
+      "ended_at_utc": "2026-11-26T04:50:15.613208+00:00",
+      "error": null
+    },
+    {
+      "name": "asset_validation",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:15.625671+00:00",
+      "ended_at_utc": "2026-11-26T04:50:17.746052+00:00",
+      "error": null
+    },
+    {
+      "name": "image_loading",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:17.758571+00:00",
+      "ended_at_utc": "2026-11-26T04:50:19.138329+00:00",
+      "error": null
+    },
+    {
+      "name": "pairing",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:19.151039+00:00",
+      "ended_at_utc": "2026-11-26T04:50:19.186461+00:00",
+      "error": null
+    },
+    {
+      "name": "backend_prepare",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:19.198926+00:00",
+      "ended_at_utc": "2026-11-26T04:50:28.886490+00:00",
+      "error": null
+    },
+    {
+      "name": "backend_reconstruct",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:28.899351+00:00",
+      "ended_at_utc": "2026-11-26T04:50:32.634194+00:00",
+      "error": null
+    },
+    {
+      "name": "backend_close",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:32.647102+00:00",
+      "ended_at_utc": "2026-11-26T04:50:32.795039+00:00",
+      "error": null
+    },
+    {
+      "name": "normalize",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:32.808388+00:00",
+      "ended_at_utc": "2026-11-26T04:50:32.826920+00:00",
+      "error": null
+    },
+    {
+      "name": "export",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:32.840082+00:00",
+      "ended_at_utc": "2026-11-26T04:50:32.923481+00:00",
+      "error": null
+    },
+    {
+      "name": "report",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:50:32.936867+00:00",
+      "ended_at_utc": "2026-11-26T04:50:32.965611+00:00",
+      "error": null
+    }
+  ],
+  "resources": [
+    {
+      "name": "backend",
+      "status": "closed",
+      "registered_at_utc": "2026-11-26T04:50:19.211466+00:00",
+      "close_started_at_utc": "2026-11-26T04:50:32.659828+00:00",
+      "closed_at_utc": "2026-11-26T04:50:32.781873+00:00",
+      "error": null
+    }
+  ],
+  "cleanup_errors": [],
+  "persistence_errors": [],
+  "error": null,
+  "artifacts": {
+    "schema_version": 1,
+    "kind": "artifact_index",
+    "artifacts": {
+      "scene.ply": {
+        "path": "artifacts/scene.ply",
+        "sha256": "cd3cdc6385875a8b74e9ed79f2358460349b25403f398201ec1676fdba4d6839",
+        "bytes": 398032
+      },
+      "cameras.json": {
+        "path": "artifacts/cameras.json",
+        "sha256": "0f5dab96ade6717b49db2454fd97673d0492fa6310ca8ff146a3bd78f3296fe4",
+        "bytes": 3887
+      },
+      "point_sources.npz": {
+        "path": "artifacts/point_sources.npz",
+        "sha256": "bd073fb8c56a6ef4e9788dd67c9a17864003e34827e30ad22dd191ad1b04abbf",
+        "bytes": 62019
+      }
+    },
+    "index_file": "artifacts/artifacts.json",
+    "point_count": 14734,
+    "camera_count": 2,
+    "ply_coordinate_dtype": "float64",
+    "rgb_encoding": "uint8; round-to-nearest-even from normalized RGB; maximum error 0.5/255",
+    "result": {
+      "schema_version": 1,
+      "result_kind": "reconstruction_result",
+      "image_ids": [
+        "01.png",
+        "02.png"
+      ],
+      "point_count": 14734,
+      "camera_count": 2,
+      "reference_image_id": "01.png",
+      "scale_status": "unverified",
+      "coordinate_convention": {
+        "handedness": "right",
+        "camera_axes": {
+          "x": "right",
+          "y": "down",
+          "z": "forward"
+        },
+        "vectors": "column",
+        "pose": "camera_to_standard_world",
+        "world_reference": "first_registered_camera_in_manifest_order",
+        "intrinsics_pixels": "processed_image",
+        "dimensions": "H,W",
+        "pixels": "x,y"
+      },
+      "T_standard_world_from_upstream_world": [
+        [
+          0.8358040455603403,
+          -0.3901149930420489,
+          0.386318203728351,
+          0.011118477565978883
+        ],
+        [
+          0.5225780401703403,
+          0.7810415835909871,
+          -0.34188610431640076,
+          0.016406993620057462
+        ],
+        [
+          -0.16835572012328398,
+          0.4876312348842476,
+          0.8566633033393101,
+          1.722693191950666
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_hw": [
+        [
+          384,
+          512
+        ],
+        [
+          384,
+          512
+        ]
+      ],
+      "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+      "availability": {
+        "source_pixels_xy": {
+          "status": "available"
+        },
+        "point_confidence": {
+          "status": "unavailable",
+          "reason": "No validated per-observation reconstruction confidence was supplied"
+        }
+      },
+      "filtering": {
+        "input_count": 14734,
+        "retained_count": 14734,
+        "removed_nonfinite": 0,
+        "removed_confidence": 0,
+        "retained_fraction": 1.0,
+        "per_view": [
+          {
+            "image_id": "01.png",
+            "input_count": 7367,
+            "retained_count": 7367
+          },
+          {
+            "image_id": "02.png",
+            "input_count": 7367,
+            "retained_count": 7367
+          }
+        ],
+        "confidence_field": null,
+        "confidence_threshold": null,
+        "confidence_strategy": "disabled",
+        "threshold_comparison": ">=",
+        "same_mask_for_all_observation_fields": true
+      },
+      "geometry_quality_accepted": false
+    },
+    "readback_checks": {
+      "point_count_and_coordinates": true,
+      "rgb_row_correspondence": true,
+      "coordinate_range": true,
+      "camera_ids_matrices_and_conventions": true,
+      "source_rows_masks_and_optional_fields": true
+    },
+    "publication": "atomic rename of verified new artifact directory",
+    "geometry_quality_accepted": false,
+    "index_sha256": "a2d21b7d2b4d3343621601a6d4a92ea58599cb9dc6a85b977f01ededafc1222d"
+  },
+  "geometry_quality_accepted": false
+}

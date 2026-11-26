@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "semantic_hash": "46c816e11a0c9875eae970b6f9cf45a0f3e1a0ff6af3f91b38dd916ec69d55cf",
+  "resource_ids": {
+    "backend.weights_manifest": "assets/weights.json",
+    "scene.manifest": "data/scene_a/manifest.json",
+    "output.root": "outputs"
+  },
+  "load_order": [
+    "configs/base.yaml",
+    "configs/t4.yaml",
+    "configs/scenes/scene_a.yaml"
+  ],
+  "fields": {
+    "schema_version": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 1
+      },
+      {
+        "source": "configs/t4.yaml",
+        "raw_value": 1
+      },
+      {
+        "source": "configs/scenes/scene_a.yaml",
+        "raw_value": 1
+      }
+    ],
+    "preprocess.long_edge": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 512
+      }
+    ],
+    "preprocess.square_ok": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": false
+      }
+    ],
+    "pairing.strategy": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": "complete"
+      }
+    ],
+    "backend.name": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": "mast3r_sparse_ga"
+      }
+    ],
+    "backend.weights_manifest": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": "../assets/weights.json"
+      }
+    ],
+    "backend.shared_intrinsics": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": false
+      }
+    ],
+    "backend.subsample": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 8
+      }
+    ],
+    "backend.coarse_iterations": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 100
+      }
+    ],
+    "backend.refine_iterations": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 100
+      }
+    ],
+    "backend.coarse_lr": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 0.07
+      }
+    ],
+    "backend.refine_lr": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 0.01
+      }
+    ],
+    "backend.matching_conf_thr": [
+      {
+        "source": "configs/base.yaml",
+        "raw_value": 0.0
+      },
+      {
+        "source": "<CLI>",
+        "raw_value": 1.5
+      }
+    ],
+    "runtime.device": [
+      {
+        "source": "configs/t4.yaml",
+        "raw_value": "cuda"
+      }
+    ],
+    "runtime.precision": [
+      {
+        "source": "configs/t4.yaml",
+        "raw_value": "fp32"
+      }
+    ],
+    "scene.id": [
+      {
+        "source": "configs/scenes/scene_a.yaml",
+        "raw_value": "scene_a"
+      }
+    ],
+    "scene.manifest": [
+      {
+        "source": "configs/scenes/scene_a.yaml",
+        "raw_value": "../../data/scene_a/manifest.json"
+      }
+    ],
+    "output.root": [
+      {
+        "source": "configs/scenes/scene_a.yaml",
+        "raw_value": "../../outputs"
+      }
+    ]
+  }
+}

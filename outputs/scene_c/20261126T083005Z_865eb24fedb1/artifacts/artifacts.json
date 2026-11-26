@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "kind": "artifact_index",
+  "artifacts": {
+    "scene.ply": {
+      "path": "artifacts/scene.ply",
+      "sha256": "79d24c3dc12916ab85b292a2099f6c5119cef8fe9c1de3ca82c8ce46071a1952",
+      "bytes": 1500874
+    },
+    "cameras.json": {
+      "path": "artifacts/cameras.json",
+      "sha256": "d0a074dee503092066bae8e952c3e4039d21aff3839654f589b9a0172f3490e0",
+      "bytes": 5373
+    },
+    "point_sources.npz": {
+      "path": "artifacts/point_sources.npz",
+      "sha256": "a90bd9e32354a3b222cd41bd903c8fff0061aee53506bab2b399fb77e0eb1c62",
+      "bytes": 231249
+    }
+  },
+  "index_file": "artifacts/artifacts.json",
+  "point_count": 55580,
+  "camera_count": 3,
+  "ply_coordinate_dtype": "float64",
+  "rgb_encoding": "uint8; round-to-nearest-even from normalized RGB; maximum error 0.5/255",
+  "result": {
+    "schema_version": 1,
+    "result_kind": "reconstruction_result",
+    "image_ids": [
+      "03.png",
+      "05.png",
+      "07.png"
+    ],
+    "point_count": 55580,
+    "camera_count": 3,
+    "reference_image_id": "03.png",
+    "scale_status": "unverified",
+    "coordinate_convention": {
+      "handedness": "right",
+      "camera_axes": {
+        "x": "right",
+        "y": "down",
+        "z": "forward"
+      },
+      "vectors": "column",
+      "pose": "camera_to_standard_world",
+      "world_reference": "first_registered_camera_in_manifest_order",
+      "intrinsics_pixels": "processed_image",
+      "dimensions": "H,W",
+      "pixels": "x,y"
+    },
+    "T_standard_world_from_upstream_world": [
+      [
+        -0.16291921661970826,
+        -0.3425794684650596,
+        0.9252548456375891,
+        -0.007956052540568196
+      ],
+      [
+        -0.9638545176045106,
+        0.2556353716238631,
+        -0.07506580009298958,
+        0.23390750318624545
+      ],
+      [
+        -0.21081183792689565,
+        -0.9040407543294997,
+        -0.37184470016091564,
+        1.6671219347475288
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "processed_hw": [
+      [
+        384,
+        512
+      ],
+      [
+        384,
+        512
+      ],
+      [
+        384,
+        512
+      ]
+    ],
+    "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+    "availability": {
+      "source_pixels_xy": {
+        "status": "available"
+      },
+      "point_confidence": {
+        "status": "unavailable",
+        "reason": "No validated per-observation reconstruction confidence was supplied"
+      }
+    },
+    "filtering": {
+      "input_count": 55580,
+      "retained_count": 55580,
+      "removed_nonfinite": 0,
+      "removed_confidence": 0,
+      "retained_fraction": 1.0,
+      "per_view": [
+        {
+          "image_id": "03.png",
+          "input_count": 18428,
+          "retained_count": 18428
+        },
+        {
+          "image_id": "05.png",
+          "input_count": 18731,
+          "retained_count": 18731
+        },
+        {
+          "image_id": "07.png",
+          "input_count": 18421,
+          "retained_count": 18421
+        }
+      ],
+      "confidence_field": null,
+      "confidence_threshold": null,
+      "confidence_strategy": "disabled",
+      "threshold_comparison": ">=",
+      "same_mask_for_all_observation_fields": true
+    },
+    "geometry_quality_accepted": false
+  },
+  "readback_checks": {
+    "point_count_and_coordinates": true,
+    "rgb_row_correspondence": true,
+    "coordinate_range": true,
+    "camera_ids_matrices_and_conventions": true,
+    "source_rows_masks_and_optional_fields": true
+  },
+  "publication": "atomic rename of verified new artifact directory",
+  "geometry_quality_accepted": false
+}

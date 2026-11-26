@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "backend": "mast3r_sparse_ga",
+  "status": "completed",
+  "backend_fingerprint": {
+    "schema_version": 1,
+    "backend": "mast3r_sparse_ga",
+    "source_fingerprint": {
+      "vendor_manifest_sha256": "140d74898111e78251fa6b8ea0be59431587e46b773cfe4fd6f67ace39ec0579",
+      "files": {
+        "mast3r.model": {
+          "file": "vendor/mast3r/mast3r/model.py",
+          "sha256": "6d888925ad837e5136a199701ce669b46cceaef165bffcc4b3abbc1ef0afc20a"
+        },
+        "mast3r.cloud_opt.sparse_ga": {
+          "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+          "sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74"
+        },
+        "dust3r.utils.image": {
+          "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+          "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+        }
+      }
+    },
+    "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+    "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+    "requested_device": "cuda",
+    "requested_precision": "fp32",
+    "observed_model_parameter_dtypes": [
+      "torch.float32"
+    ],
+    "observed_floating_buffer_dtypes": [],
+    "observed_model_devices": [
+      "cuda:0"
+    ],
+    "model_parameters_frozen": true,
+    "model_eval": true,
+    "parameter_count": 688638856,
+    "torch_version": "2.10.0+cu128",
+    "torch_cuda_version": "12.8",
+    "cuda_device_name": "Tesla T4",
+    "fingerprint_hash": "d6a71d687935065ffa0282f2c2c2f6830c44d08e6d0c4b8e9a7fa6b83635395f"
+  },
+  "input_mapping": {
+    "image_ids": [
+      "01.png",
+      "02.png"
+    ],
+    "pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+    "directed_item_count": 2,
+    "instance_identity": "resolved_file_path",
+    "image_mapping": [
+      {
+        "image_id": "01.png",
+        "idx": 0,
+        "path": "/workspace/data/scene_a/01.png"
+      },
+      {
+        "image_id": "02.png",
+        "idx": 1,
+        "path": "/workspace/data/scene_a/02.png"
+      }
+    ],
+    "pixel_copy": false,
+    "vendor_dictionaries_are_fresh": true
+  },
+  "settings": {
+    "subsample": 8,
+    "device": "cuda",
+    "lr1": 0.07,
+    "niter1": 100,
+    "lr2": 0.01,
+    "niter2": 100,
+    "matching_conf_thr": 0.0,
+    "shared_intrinsics": false
+  },
+  "scene": {
+    "schema_version": 1,
+    "result_kind": "sparse_scene_data",
+    "image_ids": [
+      "01.png",
+      "02.png"
+    ],
+    "observation_count": 14734,
+    "per_image_observation_counts": [
+      7367,
+      7367
+    ],
+    "K_processed_shape": [
+      2,
+      3,
+      3
+    ],
+    "T_world_from_camera_shape": [
+      2,
+      4,
+      4
+    ],
+    "coordinate_convention": {
+      "intrinsics": "processed_image_pixel_coordinates",
+      "pose": "camera_to_upstream_world",
+      "points": "upstream_world",
+      "world_gauge": "upstream_optimizer; no additional canonicalization",
+      "scale": "unresolved",
+      "metric_units_verified": false
+    },
+    "source_pixels_xy": {
+      "status": "available",
+      "source": {
+        "basis": "pinned_SparseGA_constructor_anchor_pixels",
+        "source_file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+        "source_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+        "coordinate_system": "processed_image",
+        "columns": [
+          "x",
+          "y"
+        ],
+        "row_order": "exact_per_image_anchor_rows_used_by_make_pts3d_and_SparseGA_colors",
+        "duplicate_xy_preserved": true,
+        "owned_cpu_copy": true,
+        "private_cache_read": false,
+        "vendor_module_globals_modified": false
+      }
+    },
+    "unavailable": {
+      "dense_depth": {
+        "status": "unavailable",
+        "value": null,
+        "reason": "Anchor optimization depths are not complete processed-image depth maps"
+      },
+      "point_confidence": {
+        "status": "unavailable",
+        "value": null,
+        "reason": "No validated per-observation confidence extraction in this step"
+      },
+      "pair_matching_metrics": {
+        "status": "unavailable",
+        "value": null,
+        "reason": "No validated full-scene pair-metric extraction in this step"
+      },
+      "actual_model_forward_calls": {
+        "status": "unavailable",
+        "value": null,
+        "reason": "Directed item count does not observe inference/cache execution"
+      }
+    },
+    "geometry_quality_accepted": false
+  },
+  "final_losses": [
+    0.00931588001549244,
+    0.3066957890987396
+  ],
+  "reconstruction_seconds_excluding_model_load": 3.7152360128238797,
+  "peak_allocated_gib": 3.1682167053222656,
+  "workspace": {
+    "cache_namespace": "20261126T045015Z_65797318eef8",
+    "temporary_cache_directory": "sparse_cache_20261126T045015Z_65797318eef8_mryz0g_l",
+    "temporary_cache_cleaned": true,
+    "cross_run_cache_reuse": false
+  },
+  "execution": {
+    "optimization_grad_enabled": true,
+    "algorithm_dtype_argument": "torch.float32",
+    "observed_intrinsics_dtype": "float32",
+    "observed_pose_dtype": "float32",
+    "observed_point_dtypes": [
+      "float32"
+    ],
+    "encoder_and_decoder_internal_dtypes": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "No per-operation dtype instrumentation in this stage"
+    },
+    "downstream_head_fp32_policy": {
+      "basis": "inspected_pinned_source",
+      "autocast_enabled": false,
+      "tokens_converted_to_float": true
+    }
+  },
+  "measurement_scope": {
+    "seconds": "sparse_global_alignment including constructor pixel capture and device synchronization; excludes extraction/export",
+    "peak_allocated_gib": "PyTorch allocator peak reset after model loading; not total VRAM"
+  },
+  "geometry_quality_accepted": false
+}

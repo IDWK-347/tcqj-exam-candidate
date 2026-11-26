@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T041729Z_4b2acf11e162",
+  "scene_id": "scene_a",
+  "mode": "reconstruction",
+  "status": "failed",
+  "created_at_utc": "2026-11-26T04:17:29.196526+00:00",
+  "started_at_utc": "2026-11-26T04:17:29.209180+00:00",
+  "ended_at_utc": "2026-11-26T04:17:43.889705+00:00",
+  "provenance": {
+    "config_semantic_hash": "31791d5e5d03b9d442b92551f6c5f9ba30f6f96ce145e56604c2a74a2a56fd60",
+    "dry_run": false,
+    "normal_entry_bound": true,
+    "verification": {
+      "real_gpu_pipeline_verified": false,
+      "M2_complete": false,
+      "geometry_quality_accepted": false
+    },
+    "implementation_sources": {
+      "src/reconlab/__init__.py": "2cd385ba8f98f3ceae9482909bb9772f2977fc856030efa6ac482deb35f064a1",
+      "src/reconlab/backends/__init__.py": "e3b6687f20f041c4588be7909eaf78b77f160093cc1fe4babe49fb24b6547515",
+      "src/reconlab/backends/mast3r.py": "c6ab182a9dce9d6ed0478fcfe37e5164c59381c12ea8365569032eeef5f7eebe",
+      "src/reconlab/backends/probe.py": "ac7cde42166f3937d57b8aee5648cc5ae9aa5229441f9b7bb72251160e5ef0bd",
+      "src/reconlab/backends/sparse_io.py": "27e28dccb250b2aa5ed3517e4d30e34895a62ada25ce5aa4715d38909146e716",
+      "src/reconlab/backends/sparse_pixels.py": "ccc5c257abafa0ebfd7356bb1aa5919d6ecb33551524efdb45a3fb2aa2faf575",
+      "src/reconlab/config.py": "e4e4f4543e743ac13f9928c543abd4eb35710f2dc2b6d352800546619f42299b",
+      "src/reconlab/entry.py": "4a4ef680e08345a91d4e6ab0dbf764fb45e375b79c1b94aa416242baa5d1d5b3",
+      "src/reconlab/exporter.py": "32bd6ccb0ecb2075f75c9ff66b7f00a1e39d9292192ab7bc8878ab4d6307e600",
+      "src/reconlab/image_loader.py": "d0be4e074631017e061a61554375382c8fd4ae7675000ee70ef45c7a9aaa138c",
+      "src/reconlab/pairing.py": "0b4d526e830b817788df8e39e8d3c382164a399fd8f1ccf8b7fe03ef7b142f4c",
+      "src/reconlab/pipeline.py": "b23c2742b61ac7d9241d0a428ac95099847de756bab37fd086ce9da264ad71bd",
+      "src/reconlab/reconstruction_pipeline.py": "ec9aaec053a91300e0c6b2f22b6a636bc3fad50eb2a6576e11f78d8826f265a2",
+      "src/reconlab/results.py": "9affc2fcd4ea47c5b2b8b4ce9dcae0e84f3c1840e81915ca604a2cab3afed5c5",
+      "scripts/run_reconstruction.py": "fa38546778c363ec939364ad89b3a2113863e0ea5ee0a0bb61750ecea7558f36"
+    },
+    "environment": {
+      "python": "3.11.1 (main, Feb  6 2026, 08:59:00) [GCC 13.3.0]",
+      "executable": "/root/.pyenv/versions/3.11.1/bin/python3",
+      "platform": "Linux-6.6.117-45.14.1.tl4.x86_64-x86_64-with-glibc2.39",
+      "loaded_reconlab_files": {
+        "reconlab": "/workspace/src/reconlab/__init__.py",
+        "reconlab.config": "/workspace/src/reconlab/config.py",
+        "reconlab.pairing": "/workspace/src/reconlab/pairing.py",
+        "reconlab.entry": "/workspace/src/reconlab/entry.py",
+        "reconlab.reconstruction_pipeline": "/workspace/src/reconlab/reconstruction_pipeline.py",
+        "reconlab.pipeline": "/workspace/src/reconlab/pipeline.py"
+      }
+    },
+    "git": {
+      "status": "available",
+      "head": "ac0ba43260f49edc192253c724d478473b639201",
+      "branch": "submission/peixinnan",
+      "working_tree_status": "M assets/weights.json\n?? .cargo/\n?? BASELINE.md\n?? CLAUDE.md\n?? DIAGNOSIS.md\n?? ENVIRONMENT.md\n?? EXPERIMENTS.md\n?? PREDICTIONS.md\n?? SUBMISSION.md\n?? kaoshengxuzhi.md\n?? outputs/scene_a/20261126T035611Z_077779e0fdea/\n?? outputs/scene_a/20261126T041729Z_4b2acf11e162/\n?? tools/"
+    },
+    "preflight": {
+      "schema_version": 1,
+      "check": "configured_reconstruction_preflight",
+      "run_id": "20261126T041729Z_4b2acf11e162",
+      "scene_id": "scene_a",
+      "config_semantic_hash": "31791d5e5d03b9d442b92551f6c5f9ba30f6f96ce145e56604c2a74a2a56fd60",
+      "sources": [
+        {
+          "project": "MASt3R",
+          "commit": "f5209afc300cec36239a7ac992263f36847bbba0",
+          "directory": "vendor/mast3r",
+          "local_patches": [
+            {
+              "patch_id": "sparse_ga_combined_v1",
+              "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+              "base_sha256": "d811614a10fe7920fb41285c3b8b9162b38a5e1ea68823f76383a2f209d3a49f",
+              "patched_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+              "patch_file": "vendor/patches/sparse_ga_combined_v1.patch",
+              "patch_sha256": "2936f21e1897b64e069ffc51b35d6fb7e4891f2abbc105ad19bcde9af0966828",
+              "changes": [
+                "post_update_complete_geometry_and_terminal_loss_snapshot",
+                "focal_log_uses_selected_return",
+                "detached_scalar_loss_logging_after_backward",
+                "Adam_parameter_identity_first_occurrence"
+              ]
+            }
+          ]
+        },
+        {
+          "project": "DUSt3R",
+          "commit": "3cc8c88c413bb9e34c41db0e0eef99c2ee010b12",
+          "directory": "vendor/mast3r/dust3r"
+        },
+        {
+          "project": "CroCo",
+          "commit": "d7de0705845239092414480bd829228723bf20de",
+          "directory": "vendor/mast3r/dust3r/croco"
+        }
+      ],
+      "manifest_sha256": "4a7c510d5da4fa845c516767abaeb0b8ac801ae49b4cfd5c3e2b902ea8eb7921",
+      "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+      "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+      "license_notice": "vendor/mast3r/CHECKPOINTS_NOTICE",
+      "input_provenance": "ai_generated_rgb_candidate",
+      "inputs": [
+        {
+          "file": "01.png",
+          "sha256": "faac2229960a9798a19e8fd6d4b3aa97dc75304eb97380ff4dc8bbb7b4da720a"
+        },
+        {
+          "file": "02.png",
+          "sha256": "935618e17b27a4f48166e9354dd37c630fcf55082850024c559d4dc5e443cc2b"
+        }
+      ],
+      "image_count": 2,
+      "expected_directed_pair_count": 2,
+      "expected_pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+      "image_size": 512,
+      "square_ok": false,
+      "settings": {
+        "subsample": 8,
+        "device": "cuda",
+        "lr1": 0.07,
+        "niter1": 100,
+        "lr2": 0.01,
+        "niter2": 100,
+        "matching_conf_thr": 0.0,
+        "shared_intrinsics": false
+      }
+    },
+    "processed_pixel_hash": "09c9c0d91d206e689ecb016db888a9d230b90ca3fc709f564345ba413ce4f859",
+    "pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+    "preprocessing_source": {
+      "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+      "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+    },
+    "backend_fingerprint_hash": "d6a71d687935065ffa0282f2c2c2f6830c44d08e6d0c4b8e9a7fa6b83635395f"
+  },
+  "phases": [
+    {
+      "name": "configuration",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:17:29.221523+00:00",
+      "ended_at_utc": "2026-11-26T04:17:29.263462+00:00",
+      "error": null
+    },
+    {
+      "name": "asset_validation",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:17:29.275872+00:00",
+      "ended_at_utc": "2026-11-26T04:17:31.431142+00:00",
+      "error": null
+    },
+    {
+      "name": "image_loading",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:17:31.443758+00:00",
+      "ended_at_utc": "2026-11-26T04:17:32.830617+00:00",
+      "error": null
+    },
+    {
+      "name": "pairing",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:17:32.843638+00:00",
+      "ended_at_utc": "2026-11-26T04:17:32.888383+00:00",
+      "error": null
+    },
+    {
+      "name": "backend_prepare",
+      "status": "succeeded",
+      "started_at_utc": "2026-11-26T04:17:32.900861+00:00",
+      "ended_at_utc": "2026-11-26T04:17:42.519937+00:00",
+      "error": null
+    },
+    {
+      "name": "backend_reconstruct",
+      "status": "failed",
+      "started_at_utc": "2026-11-26T04:17:42.532463+00:00",
+      "ended_at_utc": "2026-11-26T04:17:43.856192+00:00",
+      "error": {
+        "phase": "backend_reconstruct",
+        "type": "RuntimeError",
+        "message": "CUDA error: CUBLAS_STATUS_NOT_INITIALIZED when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`"
+      }
+    },
+    {
+      "name": "backend_close",
+      "status": "pending",
+      "started_at_utc": null,
+      "ended_at_utc": null,
+      "error": null
+    },
+    {
+      "name": "normalize",
+      "status": "pending",
+      "started_at_utc": null,
+      "ended_at_utc": null,
+      "error": null
+    },
+    {
+      "name": "export",
+      "status": "pending",
+      "started_at_utc": null,
+      "ended_at_utc": null,
+      "error": null
+    },
+    {
+      "name": "report",
+      "status": "pending",
+      "started_at_utc": null,
+      "ended_at_utc": null,
+      "error": null
+    }
+  ],
+  "resources": [
+    {
+      "name": "backend",
+      "status": "closed",
+      "registered_at_utc": "2026-11-26T04:17:32.913391+00:00",
+      "close_started_at_utc": "2026-11-26T04:17:43.869233+00:00",
+      "closed_at_utc": "2026-11-26T04:17:43.877160+00:00",
+      "error": null
+    }
+  ],
+  "cleanup_errors": [],
+  "persistence_errors": [],
+  "error": {
+    "phase": "backend_reconstruct",
+    "type": "RuntimeError",
+    "message": "CUDA error: CUBLAS_STATUS_NOT_INITIALIZED when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`"
+  },
+  "artifacts": null,
+  "geometry_quality_accepted": false
+}

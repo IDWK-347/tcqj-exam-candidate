@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T044458Z_d7fb4feff3c9",
+  "config_semantic_hash": "4c7f767ad20a3e6e6add40b03d6d5f4bf610739a5721266266b0ce46a17ecf98",
+  "manifest_sha256": "bf6f1b74580ff4746468b82ba5c3d3fb0625a467d032994532283549424b321a",
+  "processed_pixel_hash": "89e0f19b859ce3e9f8ebc98da7284b21e13943c53ccce1a0d181cdca30c2d815",
+  "pair_graph": {
+    "schema_version": 1,
+    "nodes": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.png",
+      "07.png"
+    ],
+    "edges": [
+      {
+        "id_a": "01.png",
+        "id_b": "02.png",
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "basis": "explicit_manifest_edges"
+      },
+      {
+        "id_a": "02.png",
+        "id_b": "03.png",
+        "pair_id": "pair_940720e2582b064b0cb7eb8aa36b47bcd6f4ad4f477f82662925525be5a205ef",
+        "basis": "explicit_manifest_edges"
+      },
+      {
+        "id_a": "03.png",
+        "id_b": "04.png",
+        "pair_id": "pair_71b86bd740947afe7c8c051f69dff07540128088159bf6e6de79f0c2552e2fc2",
+        "basis": "explicit_manifest_edges"
+      },
+      {
+        "id_a": "04.png",
+        "id_b": "05.png",
+        "pair_id": "pair_7c67fd34c337746c5ae4cf41dd415e21c6611399cd88893b796ee6bb172e447c",
+        "basis": "explicit_manifest_edges"
+      },
+      {
+        "id_a": "05.png",
+        "id_b": "06.png",
+        "pair_id": "pair_a2351b8c4d2ea7a5536a8086a11d6be0f3318307ead1403f1df517e7737176db",
+        "basis": "explicit_manifest_edges"
+      },
+      {
+        "id_a": "06.png",
+        "id_b": "07.png",
+        "pair_id": "pair_97424265bb191c81ebb088485d20d4057132f346e84153c15fe17bf74f0c1b25",
+        "basis": "explicit_manifest_edges"
+      }
+    ],
+    "strategy_parameters": {
+      "strategy": "explicit"
+    },
+    "directed_order_policy": "manifest_forward_block_then_reverse_v1",
+    "symmetrize": true,
+    "graph_hash": "0a68c05b0ff5a3e1e06110f7e86d3c39fd77f70fda4afba017d5ad6d910697c8",
+    "connected_components": [
+      [
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+        "07.png"
+      ]
+    ],
+    "logical_edge_count": 6,
+    "directed_item_count": 12,
+    "directed_items": [
+      {
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "source": "02.png",
+        "target": "01.png"
+      },
+      {
+        "pair_id": "pair_940720e2582b064b0cb7eb8aa36b47bcd6f4ad4f477f82662925525be5a205ef",
+        "source": "03.png",
+        "target": "02.png"
+      },
+      {
+        "pair_id": "pair_71b86bd740947afe7c8c051f69dff07540128088159bf6e6de79f0c2552e2fc2",
+        "source": "04.png",
+        "target": "03.png"
+      },
+      {
+        "pair_id": "pair_7c67fd34c337746c5ae4cf41dd415e21c6611399cd88893b796ee6bb172e447c",
+        "source": "05.png",
+        "target": "04.png"
+      },
+      {
+        "pair_id": "pair_a2351b8c4d2ea7a5536a8086a11d6be0f3318307ead1403f1df517e7737176db",
+        "source": "06.png",
+        "target": "05.png"
+      },
+      {
+        "pair_id": "pair_97424265bb191c81ebb088485d20d4057132f346e84153c15fe17bf74f0c1b25",
+        "source": "07.png",
+        "target": "06.png"
+      },
+      {
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "source": "01.png",
+        "target": "02.png"
+      },
+      {
+        "pair_id": "pair_940720e2582b064b0cb7eb8aa36b47bcd6f4ad4f477f82662925525be5a205ef",
+        "source": "02.png",
+        "target": "03.png"
+      },
+      {
+        "pair_id": "pair_71b86bd740947afe7c8c051f69dff07540128088159bf6e6de79f0c2552e2fc2",
+        "source": "03.png",
+        "target": "04.png"
+      },
+      {
+        "pair_id": "pair_7c67fd34c337746c5ae4cf41dd415e21c6611399cd88893b796ee6bb172e447c",
+        "source": "04.png",
+        "target": "05.png"
+      },
+      {
+        "pair_id": "pair_a2351b8c4d2ea7a5536a8086a11d6be0f3318307ead1403f1df517e7737176db",
+        "source": "05.png",
+        "target": "06.png"
+      },
+      {
+        "pair_id": "pair_97424265bb191c81ebb088485d20d4057132f346e84153c15fe17bf74f0c1b25",
+        "source": "06.png",
+        "target": "07.png"
+      }
+    ],
+    "actual_model_forward_calls": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "Pairing does not observe model execution"
+    },
+    "visual_overlap": {
+      "status": "unverified",
+      "reason": "Structural connectivity does not prove visual overlap"
+    }
+  }
+}

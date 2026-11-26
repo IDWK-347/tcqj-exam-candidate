@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "check": "normal_reconstruction_pipeline",
+  "run_id": "20261126T045956Z_817a38ed404d",
+  "scene_id": "scene_a",
+  "config_semantic_hash": "46c816e11a0c9875eae970b6f9cf45a0f3e1a0ff6af3f91b38dd916ec69d55cf",
+  "sources": [
+    {
+      "project": "MASt3R",
+      "commit": "f5209afc300cec36239a7ac992263f36847bbba0",
+      "directory": "vendor/mast3r",
+      "local_patches": [
+        {
+          "patch_id": "sparse_ga_combined_v1",
+          "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+          "base_sha256": "d811614a10fe7920fb41285c3b8b9162b38a5e1ea68823f76383a2f209d3a49f",
+          "patched_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+          "patch_file": "vendor/patches/sparse_ga_combined_v1.patch",
+          "patch_sha256": "2936f21e1897b64e069ffc51b35d6fb7e4891f2abbc105ad19bcde9af0966828",
+          "changes": [
+            "post_update_complete_geometry_and_terminal_loss_snapshot",
+            "focal_log_uses_selected_return",
+            "detached_scalar_loss_logging_after_backward",
+            "Adam_parameter_identity_first_occurrence"
+          ]
+        }
+      ]
+    },
+    {
+      "project": "DUSt3R",
+      "commit": "3cc8c88c413bb9e34c41db0e0eef99c2ee010b12",
+      "directory": "vendor/mast3r/dust3r"
+    },
+    {
+      "project": "CroCo",
+      "commit": "d7de0705845239092414480bd829228723bf20de",
+      "directory": "vendor/mast3r/dust3r/croco"
+    }
+  ],
+  "manifest_sha256": "4a7c510d5da4fa845c516767abaeb0b8ac801ae49b4cfd5c3e2b902ea8eb7921",
+  "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+  "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "license_notice": "vendor/mast3r/CHECKPOINTS_NOTICE",
+  "input_provenance": "ai_generated_rgb_candidate",
+  "inputs": [
+    {
+      "file": "01.png",
+      "sha256": "faac2229960a9798a19e8fd6d4b3aa97dc75304eb97380ff4dc8bbb7b4da720a"
+    },
+    {
+      "file": "02.png",
+      "sha256": "935618e17b27a4f48166e9354dd37c630fcf55082850024c559d4dc5e443cc2b"
+    }
+  ],
+  "image_count": 2,
+  "expected_directed_pair_count": 2,
+  "expected_pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+  "image_size": 512,
+  "square_ok": false,
+  "settings": {
+    "subsample": 8,
+    "device": "cuda",
+    "lr1": 0.07,
+    "niter1": 100,
+    "lr2": 0.01,
+    "niter2": 100,
+    "matching_conf_thr": 1.5,
+    "shared_intrinsics": false
+  },
+  "result": {
+    "schema_version": 1,
+    "result_kind": "reconstruction_result",
+    "image_ids": [
+      "01.png",
+      "02.png"
+    ],
+    "point_count": 14734,
+    "camera_count": 2,
+    "reference_image_id": "01.png",
+    "scale_status": "unverified",
+    "coordinate_convention": {
+      "handedness": "right",
+      "camera_axes": {
+        "x": "right",
+        "y": "down",
+        "z": "forward"
+      },
+      "vectors": "column",
+      "pose": "camera_to_standard_world",
+      "world_reference": "first_registered_camera_in_manifest_order",
+      "intrinsics_pixels": "processed_image",
+      "dimensions": "H,W",
+      "pixels": "x,y"
+    },
+    "T_standard_world_from_upstream_world": [
+      [
+        0.8358040455603403,
+        -0.3901149930420489,
+        0.386318203728351,
+        0.011118477565978883
+      ],
+      [
+        0.5225780401703403,
+        0.7810415835909871,
+        -0.34188610431640076,
+        0.016406993620057462
+      ],
+      [
+        -0.16835572012328398,
+        0.4876312348842476,
+        0.8566633033393101,
+        1.722693191950666
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "processed_hw": [
+      [
+        384,
+        512
+      ],
+      [
+        384,
+        512
+      ]
+    ],
+    "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+    "availability": {
+      "source_pixels_xy": {
+        "status": "available"
+      },
+      "point_confidence": {
+        "status": "unavailable",
+        "reason": "No validated per-observation reconstruction confidence was supplied"
+      }
+    },
+    "filtering": {
+      "input_count": 14734,
+      "retained_count": 14734,
+      "removed_nonfinite": 0,
+      "removed_confidence": 0,
+      "retained_fraction": 1.0,
+      "per_view": [
+        {
+          "image_id": "01.png",
+          "input_count": 7367,
+          "retained_count": 7367
+        },
+        {
+          "image_id": "02.png",
+          "input_count": 7367,
+          "retained_count": 7367
+        }
+      ],
+      "confidence_field": null,
+      "confidence_threshold": null,
+      "confidence_strategy": "disabled",
+      "threshold_comparison": ">=",
+      "same_mask_for_all_observation_fields": true
+    },
+    "geometry_quality_accepted": false
+  },
+  "artifacts": {
+    "schema_version": 1,
+    "kind": "artifact_index",
+    "artifacts": {
+      "scene.ply": {
+        "path": "artifacts/scene.ply",
+        "sha256": "cd3cdc6385875a8b74e9ed79f2358460349b25403f398201ec1676fdba4d6839",
+        "bytes": 398032
+      },
+      "cameras.json": {
+        "path": "artifacts/cameras.json",
+        "sha256": "0f5dab96ade6717b49db2454fd97673d0492fa6310ca8ff146a3bd78f3296fe4",
+        "bytes": 3887
+      },
+      "point_sources.npz": {
+        "path": "artifacts/point_sources.npz",
+        "sha256": "bd073fb8c56a6ef4e9788dd67c9a17864003e34827e30ad22dd191ad1b04abbf",
+        "bytes": 62019
+      }
+    },
+    "index_file": "artifacts/artifacts.json",
+    "point_count": 14734,
+    "camera_count": 2,
+    "ply_coordinate_dtype": "float64",
+    "rgb_encoding": "uint8; round-to-nearest-even from normalized RGB; maximum error 0.5/255",
+    "result": {
+      "schema_version": 1,
+      "result_kind": "reconstruction_result",
+      "image_ids": [
+        "01.png",
+        "02.png"
+      ],
+      "point_count": 14734,
+      "camera_count": 2,
+      "reference_image_id": "01.png",
+      "scale_status": "unverified",
+      "coordinate_convention": {
+        "handedness": "right",
+        "camera_axes": {
+          "x": "right",
+          "y": "down",
+          "z": "forward"
+        },
+        "vectors": "column",
+        "pose": "camera_to_standard_world",
+        "world_reference": "first_registered_camera_in_manifest_order",
+        "intrinsics_pixels": "processed_image",
+        "dimensions": "H,W",
+        "pixels": "x,y"
+      },
+      "T_standard_world_from_upstream_world": [
+        [
+          0.8358040455603403,
+          -0.3901149930420489,
+          0.386318203728351,
+          0.011118477565978883
+        ],
+        [
+          0.5225780401703403,
+          0.7810415835909871,
+          -0.34188610431640076,
+          0.016406993620057462
+        ],
+        [
+          -0.16835572012328398,
+          0.4876312348842476,
+          0.8566633033393101,
+          1.722693191950666
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_hw": [
+        [
+          384,
+          512
+        ],
+        [
+          384,
+          512
+        ]
+      ],
+      "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+      "availability": {
+        "source_pixels_xy": {
+          "status": "available"
+        },
+        "point_confidence": {
+          "status": "unavailable",
+          "reason": "No validated per-observation reconstruction confidence was supplied"
+        }
+      },
+      "filtering": {
+        "input_count": 14734,
+        "retained_count": 14734,
+        "removed_nonfinite": 0,
+        "removed_confidence": 0,
+        "retained_fraction": 1.0,
+        "per_view": [
+          {
+            "image_id": "01.png",
+            "input_count": 7367,
+            "retained_count": 7367
+          },
+          {
+            "image_id": "02.png",
+            "input_count": 7367,
+            "retained_count": 7367
+          }
+        ],
+        "confidence_field": null,
+        "confidence_threshold": null,
+        "confidence_strategy": "disabled",
+        "threshold_comparison": ">=",
+        "same_mask_for_all_observation_fields": true
+      },
+      "geometry_quality_accepted": false
+    },
+    "readback_checks": {
+      "point_count_and_coordinates": true,
+      "rgb_row_correspondence": true,
+      "coordinate_range": true,
+      "camera_ids_matrices_and_conventions": true,
+      "source_rows_masks_and_optional_fields": true
+    },
+    "publication": "atomic rename of verified new artifact directory",
+    "geometry_quality_accepted": false,
+    "index_sha256": "a2d21b7d2b4d3343621601a6d4a92ea58599cb9dc6a85b977f01ededafc1222d"
+  },
+  "backend_result_file": "backend_result.json",
+  "backend_events_file": "backend_events.jsonl",
+  "pair_graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+  "logical_edge_count": 1,
+  "directed_pair_count": 2,
+  "processed_pixel_hash": "09c9c0d91d206e689ecb016db888a9d230b90ca3fc709f564345ba413ce4f859",
+  "per_image_observation_counts": [
+    7367,
+    7367
+  ],
+  "final_losses": [
+    0.00931588001549244,
+    0.3066957890987396
+  ],
+  "reconstruction_seconds_excluding_model_load": 3.639271249063313,
+  "peak_allocated_gib": 3.1682167053222656,
+  "backend_measurement_scope": {
+    "seconds": "sparse_global_alignment including constructor pixel capture and device synchronization; excludes extraction/export",
+    "peak_allocated_gib": "PyTorch allocator peak reset after model loading; not total VRAM"
+  },
+  "verification": {
+    "real_gpu_pipeline_verified": false,
+    "M2_complete": false,
+    "geometry_quality_accepted": false
+  },
+  "quality_review": "not_yet_reviewed",
+  "source_pixels_xy": {
+    "status": "available",
+    "source": {
+      "basis": "pinned_SparseGA_constructor_anchor_pixels",
+      "source_file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+      "source_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+      "coordinate_system": "processed_image",
+      "columns": [
+        "x",
+        "y"
+      ],
+      "row_order": "exact_per_image_anchor_rows_used_by_make_pts3d_and_SparseGA_colors",
+      "duplicate_xy_preserved": true,
+      "owned_cpu_copy": true,
+      "private_cache_read": false,
+      "vendor_module_globals_modified": false
+    }
+  },
+  "limitations": [
+    "Observation rows are not unique physical points",
+    "Source pixels are processed-image coordinates; duplicates are retained",
+    "Reconstruction confidence remains unavailable",
+    "Different coarse/fine objective values are not a quality comparison"
+  ]
+}

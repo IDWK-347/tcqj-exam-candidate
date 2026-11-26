@@ -8,6 +8,6 @@ scene:
 pairing:
   strategy: explicit
 backend:
-  subsample: 4
+  subsample: 8
 output:
   root: ../../outputs

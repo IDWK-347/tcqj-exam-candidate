@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+  "preprocess_config": {
+    "long_edge": 512,
+    "square_ok": false
+  },
+  "manifest_sha256": "bf6f1b74580ff4746468b82ba5c3d3fb0625a467d032994532283549424b321a",
+  "processed_pixel_hash": "89e0f19b859ce3e9f8ebc98da7284b21e13943c53ccce1a0d181cdca30c2d815",
+  "warnings": [],
+  "upstream_source": {
+    "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+    "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+  },
+  "coordinate_convention": {
+    "dimensions": "H,W",
+    "pixels": "x,y",
+    "resize": "half_pixel",
+    "crop_box": "left,top,right,bottom; right/bottom exclusive",
+    "transform_input": "EXIF-oriented integer pixel centers"
+  },
+  "records": [
+    {
+      "schema_version": 1,
+      "image_id": "01.png",
+      "relative_path": "01.png",
+      "file_sha256": "663aa849124e29811b442b21f9db3f248ee604b13a7861ef4ff192b5eff9581a",
+      "manifest_index": 0,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "68da0b19173e0db1f9ee752323e5fd63285efc4d94a1afb2acd83a96ed841023",
+      "model_tensor_sha256": "8e5068ddc239fcc46c22371afca746322a57a3b82f6e8003766a51f495d60dde"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "02.png",
+      "relative_path": "02.png",
+      "file_sha256": "24b75da0446964771ec5a55d3dfd4a5394adad41e303153e0d96d2281d4da911",
+      "manifest_index": 1,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "5ef5a44115ccdbbcf44b562967c12a449a49683069ce42810220f2f1976320f6",
+      "model_tensor_sha256": "9478789afc0878d28a8cb93770f418e80b8ff15908a3b2a499062ad3150a2921"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "03.png",
+      "relative_path": "03.png",
+      "file_sha256": "387537a8f8998be745a54217aef2430b4dd22da2c09e888f451aa06f1b1c3f96",
+      "manifest_index": 2,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "c80c3bced1eb1e5679de2ec0715dfb158f1852220df5a0bab104e2589b92c277",
+      "model_tensor_sha256": "dcdd2f4a5cd229b55d2d5d0ec5e1b271f370c6a00eda167329aed960d1c1e9c6"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "04.png",
+      "relative_path": "04.png",
+      "file_sha256": "46d118cea07d7d7c68713a90bbf3d92a642f516807d127c7f926f6926c5b5d15",
+      "manifest_index": 3,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "79ea028742100533b67802a9fe458cd929531f67c668229db075cbb83a1f010c",
+      "model_tensor_sha256": "77f89b7fbf7d04bd60eb46c0577a8ffdf1621acbbada12d263626589a3a07cce"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "05.png",
+      "relative_path": "05.png",
+      "file_sha256": "397e12afcd9fdd7983862cf017da6ae818df1b822f33061a42f79f15410a360c",
+      "manifest_index": 4,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "21a0409fdd74415f39f9c80a61edb3773399220b3e23d8f9f437ddf61b95b53a",
+      "model_tensor_sha256": "c19456410eebe52bcec0295ff4d7bbb770d4da655e728750073c63cf7665b130"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "06.png",
+      "relative_path": "06.png",
+      "file_sha256": "26a5d4ea05addbfc3655945cd6ff8b2061ada4f99a4212cf9e3aedd2891a285f",
+      "manifest_index": 5,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "283b9cac8c6ec504b0510c03e3f9dd92d86565c9c6bdf3e99d6fba19dc461c48",
+      "model_tensor_sha256": "1a2af041989c655afd7058c8167395550c8edb59e991f0d9a33f9d256751e29d"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "07.png",
+      "relative_path": "07.png",
+      "file_sha256": "0801efa4d3667ff660635e4db801d9e1c73850c8b156136f54d28f4ac6299fb2",
+      "manifest_index": 6,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "3a704ad5d1195a53c496c4eb355577012816d714d4a1c117bbda45637525248f",
+      "model_tensor_sha256": "c97f27cc0c8a07ec1bf8e4e374ff6ebdd4dd929ea1be4e3e37a39e97bc2ce0a6"
+    }
+  ],
+  "pairing_declaration": {
+    "explicit_edges": [
+      [
+        "01.png",
+        "02.png"
+      ],
+      [
+        "02.png",
+        "03.png"
+      ],
+      [
+        "03.png",
+        "04.png"
+      ],
+      [
+        "04.png",
+        "05.png"
+      ],
+      [
+        "05.png",
+        "06.png"
+      ],
+      [
+        "06.png",
+        "07.png"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "backend": "mast3r_sparse_ga",
+  "source_fingerprint": {
+    "vendor_manifest_sha256": "140d74898111e78251fa6b8ea0be59431587e46b773cfe4fd6f67ace39ec0579",
+    "files": {
+      "mast3r.model": {
+        "file": "vendor/mast3r/mast3r/model.py",
+        "sha256": "6d888925ad837e5136a199701ce669b46cceaef165bffcc4b3abbc1ef0afc20a"
+      },
+      "mast3r.cloud_opt.sparse_ga": {
+        "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+        "sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74"
+      },
+      "dust3r.utils.image": {
+        "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+        "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+      }
+    }
+  },
+  "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+  "requested_device": "cuda",
+  "requested_precision": "fp32",
+  "observed_model_parameter_dtypes": [
+    "torch.float32"
+  ],
+  "observed_floating_buffer_dtypes": [],
+  "observed_model_devices": [
+    "cuda:0"
+  ],
+  "model_parameters_frozen": true,
+  "model_eval": true,
+  "parameter_count": 688638856,
+  "torch_version": "2.10.0+cu128",
+  "torch_cuda_version": "12.8",
+  "cuda_device_name": "Tesla T4",
+  "fingerprint_hash": "d6a71d687935065ffa0282f2c2c2f6830c44d08e6d0c4b8e9a7fa6b83635395f"
+}

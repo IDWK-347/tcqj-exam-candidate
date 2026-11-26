@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+  "preprocess_config": {
+    "long_edge": 512,
+    "square_ok": false
+  },
+  "manifest_sha256": "4a7c510d5da4fa845c516767abaeb0b8ac801ae49b4cfd5c3e2b902ea8eb7921",
+  "processed_pixel_hash": "09c9c0d91d206e689ecb016db888a9d230b90ca3fc709f564345ba413ce4f859",
+  "warnings": [],
+  "upstream_source": {
+    "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+    "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+  },
+  "coordinate_convention": {
+    "dimensions": "H,W",
+    "pixels": "x,y",
+    "resize": "half_pixel",
+    "crop_box": "left,top,right,bottom; right/bottom exclusive",
+    "transform_input": "EXIF-oriented integer pixel centers"
+  },
+  "records": [
+    {
+      "schema_version": 1,
+      "image_id": "01.png",
+      "relative_path": "01.png",
+      "file_sha256": "faac2229960a9798a19e8fd6d4b3aa97dc75304eb97380ff4dc8bbb7b4da720a",
+      "manifest_index": 0,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "59cce034cd597e898ba112a32335960af8c89985f6f754396eb730e1f9ce99ea",
+      "model_tensor_sha256": "6ce9c3bb045958d49bd0b3ac352a384e586aa010a3ade4692b4bd5967775df05"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "02.png",
+      "relative_path": "02.png",
+      "file_sha256": "935618e17b27a4f48166e9354dd37c630fcf55082850024c559d4dc5e443cc2b",
+      "manifest_index": 1,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "ac5ef2b32eb123264cc2e93036610d77140dfd7e06924d5f70b4409e954ce0be",
+      "model_tensor_sha256": "17af01eba95e279e98c350f1c71dd2e0a219b72693220e49cc3d8b955abb7cf5"
+    }
+  ]
+}

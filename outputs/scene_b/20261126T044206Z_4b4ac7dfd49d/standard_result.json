@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "result_kind": "reconstruction_result",
+  "image_ids": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png"
+  ],
+  "point_count": 117830,
+  "camera_count": 7,
+  "reference_image_id": "01.png",
+  "scale_status": "unverified",
+  "coordinate_convention": {
+    "handedness": "right",
+    "camera_axes": {
+      "x": "right",
+      "y": "down",
+      "z": "forward"
+    },
+    "vectors": "column",
+    "pose": "camera_to_standard_world",
+    "world_reference": "first_registered_camera_in_manifest_order",
+    "intrinsics_pixels": "processed_image",
+    "dimensions": "H,W",
+    "pixels": "x,y"
+  },
+  "T_standard_world_from_upstream_world": [
+    [
+      0.6959653103964036,
+      0.7174170130381424,
+      -0.03073627751418532,
+      0.07638828365573522
+    ],
+    [
+      -0.5547269646969405,
+      0.5643339911010133,
+      0.6113957426079328,
+      -0.006647884791275353
+    ],
+    [
+      0.4559712616384644,
+      -0.40846010622955986,
+      0.790727509944253,
+      1.5405163749802564
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "processed_hw": [
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ]
+  ],
+  "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+  "availability": {
+    "source_pixels_xy": {
+      "status": "available"
+    },
+    "point_confidence": {
+      "status": "unavailable",
+      "reason": "No validated per-observation reconstruction confidence was supplied"
+    }
+  },
+  "filtering": {
+    "input_count": 117830,
+    "retained_count": 117830,
+    "removed_nonfinite": 0,
+    "removed_confidence": 0,
+    "retained_fraction": 1.0,
+    "per_view": [
+      {
+        "image_id": "01.png",
+        "input_count": 9924,
+        "retained_count": 9924
+      },
+      {
+        "image_id": "02.png",
+        "input_count": 20064,
+        "retained_count": 20064
+      },
+      {
+        "image_id": "03.png",
+        "input_count": 19682,
+        "retained_count": 19682
+      },
+      {
+        "image_id": "04.png",
+        "input_count": 19281,
+        "retained_count": 19281
+      },
+      {
+        "image_id": "05.png",
+        "input_count": 19047,
+        "retained_count": 19047
+      },
+      {
+        "image_id": "06.png",
+        "input_count": 19570,
+        "retained_count": 19570
+      },
+      {
+        "image_id": "07.png",
+        "input_count": 10262,
+        "retained_count": 10262
+      }
+    ],
+    "confidence_field": null,
+    "confidence_threshold": null,
+    "confidence_strategy": "disabled",
+    "threshold_comparison": ">=",
+    "same_mask_for_all_observation_fields": true
+  },
+  "geometry_quality_accepted": false
+}

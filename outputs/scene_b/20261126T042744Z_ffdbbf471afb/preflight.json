@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "check": "configured_reconstruction_preflight",
+  "run_id": "20261126T042744Z_ffdbbf471afb",
+  "scene_id": "scene_b",
+  "config_semantic_hash": "658a646635cfc28ecbe480da9bf724be5cf76332f661a7dcdfc2c3afdece315f",
+  "sources": [
+    {
+      "project": "MASt3R",
+      "commit": "f5209afc300cec36239a7ac992263f36847bbba0",
+      "directory": "vendor/mast3r",
+      "local_patches": [
+        {
+          "patch_id": "sparse_ga_combined_v1",
+          "file": "vendor/mast3r/mast3r/cloud_opt/sparse_ga.py",
+          "base_sha256": "d811614a10fe7920fb41285c3b8b9162b38a5e1ea68823f76383a2f209d3a49f",
+          "patched_sha256": "195cc7510b65871f40ea51cb36df40313187fa3ac47c412576c755c44573ad74",
+          "patch_file": "vendor/patches/sparse_ga_combined_v1.patch",
+          "patch_sha256": "2936f21e1897b64e069ffc51b35d6fb7e4891f2abbc105ad19bcde9af0966828",
+          "changes": [
+            "post_update_complete_geometry_and_terminal_loss_snapshot",
+            "focal_log_uses_selected_return",
+            "detached_scalar_loss_logging_after_backward",
+            "Adam_parameter_identity_first_occurrence"
+          ]
+        }
+      ]
+    },
+    {
+      "project": "DUSt3R",
+      "commit": "3cc8c88c413bb9e34c41db0e0eef99c2ee010b12",
+      "directory": "vendor/mast3r/dust3r"
+    },
+    {
+      "project": "CroCo",
+      "commit": "d7de0705845239092414480bd829228723bf20de",
+      "directory": "vendor/mast3r/dust3r/croco"
+    }
+  ],
+  "manifest_sha256": "bf6f1b74580ff4746468b82ba5c3d3fb0625a467d032994532283549424b321a",
+  "weight_sha256": "e28f91b488554653e2b46ddae9c78c1143e0bcb2e27d3e26cdb0b717f1568eb2",
+  "weight_resource": "checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth",
+  "license_notice": "vendor/mast3r/CHECKPOINTS_NOTICE",
+  "input_provenance": "handheld_capture_7_views",
+  "inputs": [
+    {
+      "file": "01.png",
+      "sha256": "663aa849124e29811b442b21f9db3f248ee604b13a7861ef4ff192b5eff9581a"
+    },
+    {
+      "file": "02.png",
+      "sha256": "24b75da0446964771ec5a55d3dfd4a5394adad41e303153e0d96d2281d4da911"
+    },
+    {
+      "file": "03.png",
+      "sha256": "387537a8f8998be745a54217aef2430b4dd22da2c09e888f451aa06f1b1c3f96"
+    },
+    {
+      "file": "04.png",
+      "sha256": "46d118cea07d7d7c68713a90bbf3d92a642f516807d127c7f926f6926c5b5d15"
+    },
+    {
+      "file": "05.png",
+      "sha256": "397e12afcd9fdd7983862cf017da6ae818df1b822f33061a42f79f15410a360c"
+    },
+    {
+      "file": "06.png",
+      "sha256": "26a5d4ea05addbfc3655945cd6ff8b2061ada4f99a4212cf9e3aedd2891a285f"
+    },
+    {
+      "file": "07.png",
+      "sha256": "0801efa4d3667ff660635e4db801d9e1c73850c8b156136f54d28f4ac6299fb2"
+    }
+  ],
+  "image_count": 7,
+  "expected_directed_pair_count": 12,
+  "expected_pair_graph_hash": "0a68c05b0ff5a3e1e06110f7e86d3c39fd77f70fda4afba017d5ad6d910697c8",
+  "image_size": 512,
+  "square_ok": false,
+  "settings": {
+    "subsample": 4,
+    "device": "cuda",
+    "lr1": 0.07,
+    "niter1": 100,
+    "lr2": 0.01,
+    "niter2": 100,
+    "matching_conf_thr": 0.0,
+    "shared_intrinsics": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "result_kind": "reconstruction_result",
+  "image_ids": [
+    "01.png",
+    "02.png"
+  ],
+  "point_count": 14734,
+  "camera_count": 2,
+  "reference_image_id": "01.png",
+  "scale_status": "unverified",
+  "coordinate_convention": {
+    "handedness": "right",
+    "camera_axes": {
+      "x": "right",
+      "y": "down",
+      "z": "forward"
+    },
+    "vectors": "column",
+    "pose": "camera_to_standard_world",
+    "world_reference": "first_registered_camera_in_manifest_order",
+    "intrinsics_pixels": "processed_image",
+    "dimensions": "H,W",
+    "pixels": "x,y"
+  },
+  "T_standard_world_from_upstream_world": [
+    [
+      0.8358040455603403,
+      -0.3901149930420489,
+      0.386318203728351,
+      0.011118477565978883
+    ],
+    [
+      0.5225780401703403,
+      0.7810415835909871,
+      -0.34188610431640076,
+      0.016406993620057462
+    ],
+    [
+      -0.16835572012328398,
+      0.4876312348842476,
+      0.8566633033393101,
+      1.722693191950666
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "processed_hw": [
+    [
+      384,
+      512
+    ],
+    [
+      384,
+      512
+    ]
+  ],
+  "source_observation_index_meaning": "zero-based row in each original sparse view; not a pixel coordinate",
+  "availability": {
+    "source_pixels_xy": {
+      "status": "available"
+    },
+    "point_confidence": {
+      "status": "unavailable",
+      "reason": "No validated per-observation reconstruction confidence was supplied"
+    }
+  },
+  "filtering": {
+    "input_count": 14734,
+    "retained_count": 14734,
+    "removed_nonfinite": 0,
+    "removed_confidence": 0,
+    "retained_fraction": 1.0,
+    "per_view": [
+      {
+        "image_id": "01.png",
+        "input_count": 7367,
+        "retained_count": 7367
+      },
+      {
+        "image_id": "02.png",
+        "input_count": 7367,
+        "retained_count": 7367
+      }
+    ],
+    "confidence_field": null,
+    "confidence_threshold": null,
+    "confidence_strategy": "disabled",
+    "threshold_comparison": ">=",
+    "same_mask_for_all_observation_fields": true
+  },
+  "geometry_quality_accepted": false
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T041729Z_4b2acf11e162",
+  "status": "failed",
+  "error": {
+    "phase": "backend_reconstruct",
+    "type": "RuntimeError",
+    "message": "CUDA error: CUBLAS_STATUS_NOT_INITIALIZED when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`"
+  },
+  "geometry_quality_accepted": false
+}

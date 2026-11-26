@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+  "preprocess_config": {
+    "long_edge": 512,
+    "square_ok": false
+  },
+  "manifest_sha256": "bdea5f03cd0a2b8f9614233134432936951986774da653c8829a1e6e82e91a85",
+  "processed_pixel_hash": "88e77fdb256f005ee90b01b30bf3ca53f5ca9677cb848f03e3aba086ffb503a3",
+  "warnings": [],
+  "upstream_source": {
+    "file": "vendor/mast3r/dust3r/dust3r/utils/image.py",
+    "sha256": "804432f45453ab8da4539b244b9dd91e666b7c536714ff4eda378738f4b6c958"
+  },
+  "coordinate_convention": {
+    "dimensions": "H,W",
+    "pixels": "x,y",
+    "resize": "half_pixel",
+    "crop_box": "left,top,right,bottom; right/bottom exclusive",
+    "transform_input": "EXIF-oriented integer pixel centers"
+  },
+  "records": [
+    {
+      "schema_version": 1,
+      "image_id": "03.png",
+      "relative_path": "03.png",
+      "file_sha256": "387537a8f8998be745a54217aef2430b4dd22da2c09e888f451aa06f1b1c3f96",
+      "manifest_index": 0,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "c80c3bced1eb1e5679de2ec0715dfb158f1852220df5a0bab104e2589b92c277",
+      "model_tensor_sha256": "dcdd2f4a5cd229b55d2d5d0ec5e1b271f370c6a00eda167329aed960d1c1e9c6"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "05.png",
+      "relative_path": "05.png",
+      "file_sha256": "397e12afcd9fdd7983862cf017da6ae818df1b822f33061a42f79f15410a360c",
+      "manifest_index": 1,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "21a0409fdd74415f39f9c80a61edb3773399220b3e23d8f9f437ddf61b95b53a",
+      "model_tensor_sha256": "c19456410eebe52bcec0295ff4d7bbb770d4da655e728750073c63cf7665b130"
+    },
+    {
+      "schema_version": 1,
+      "image_id": "07.png",
+      "relative_path": "07.png",
+      "file_sha256": "0801efa4d3667ff660635e4db801d9e1c73850c8b156136f54d28f4ac6299fb2",
+      "manifest_index": 2,
+      "original_hw": [
+        1086,
+        1448
+      ],
+      "oriented_hw": [
+        1086,
+        1448
+      ],
+      "exif_orientation": 1,
+      "exif_operation": "none",
+      "resize_hw": [
+        384,
+        512
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "processed_hw": [
+        384,
+        512
+      ],
+      "preprocess_policy": "dust3r_compatible_512_patch16_v1",
+      "A_oriented_to_processed": [
+        [
+          0.35359116022099446,
+          0.0,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.35359116022099446,
+          -0.32320441988950277
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "processed_pixel_sha256": "3a704ad5d1195a53c496c4eb355577012816d714d4a1c117bbda45637525248f",
+      "model_tensor_sha256": "c97f27cc0c8a07ec1bf8e4e374ff6ebdd4dd929ea1be4e3e37a39e97bc2ce0a6"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T083005Z_865eb24fedb1",
+  "config_semantic_hash": "ae3bf6aa02616dbcdad7c1bf534e2cfbed8deff4e34fb2e69bf5d19276dfbb01",
+  "manifest_sha256": "bdea5f03cd0a2b8f9614233134432936951986774da653c8829a1e6e82e91a85",
+  "processed_pixel_hash": "88e77fdb256f005ee90b01b30bf3ca53f5ca9677cb848f03e3aba086ffb503a3",
+  "pair_graph": {
+    "schema_version": 1,
+    "nodes": [
+      "03.png",
+      "05.png",
+      "07.png"
+    ],
+    "edges": [
+      {
+        "id_a": "03.png",
+        "id_b": "05.png",
+        "pair_id": "pair_c5965f84cce29b2a8766e555fd84bedba1d0d6175042fa9a65112e47e79dff93",
+        "basis": "complete_all_unordered_pairs"
+      },
+      {
+        "id_a": "03.png",
+        "id_b": "07.png",
+        "pair_id": "pair_8aa35d2c76fbd2ced811390c1e09406bd061f8c26b3e982689199725fe490de6",
+        "basis": "complete_all_unordered_pairs"
+      },
+      {
+        "id_a": "05.png",
+        "id_b": "07.png",
+        "pair_id": "pair_f1c06d54287011d74e0fd6644ff924183d3acc24247511d608b641df89768f23",
+        "basis": "complete_all_unordered_pairs"
+      }
+    ],
+    "strategy_parameters": {
+      "strategy": "complete"
+    },
+    "directed_order_policy": "complete_manifest_forward_block_then_reverse_v1",
+    "symmetrize": true,
+    "graph_hash": "02220ee533c45d795d0fd2e9408d3fe7492c5692e8a2db992f632aeb34aad220",
+    "connected_components": [
+      [
+        "03.png",
+        "05.png",
+        "07.png"
+      ]
+    ],
+    "logical_edge_count": 3,
+    "directed_item_count": 6,
+    "directed_items": [
+      {
+        "pair_id": "pair_c5965f84cce29b2a8766e555fd84bedba1d0d6175042fa9a65112e47e79dff93",
+        "source": "05.png",
+        "target": "03.png"
+      },
+      {
+        "pair_id": "pair_8aa35d2c76fbd2ced811390c1e09406bd061f8c26b3e982689199725fe490de6",
+        "source": "07.png",
+        "target": "03.png"
+      },
+      {
+        "pair_id": "pair_f1c06d54287011d74e0fd6644ff924183d3acc24247511d608b641df89768f23",
+        "source": "07.png",
+        "target": "05.png"
+      },
+      {
+        "pair_id": "pair_c5965f84cce29b2a8766e555fd84bedba1d0d6175042fa9a65112e47e79dff93",
+        "source": "03.png",
+        "target": "05.png"
+      },
+      {
+        "pair_id": "pair_8aa35d2c76fbd2ced811390c1e09406bd061f8c26b3e982689199725fe490de6",
+        "source": "03.png",
+        "target": "07.png"
+      },
+      {
+        "pair_id": "pair_f1c06d54287011d74e0fd6644ff924183d3acc24247511d608b641df89768f23",
+        "source": "05.png",
+        "target": "07.png"
+      }
+    ],
+    "actual_model_forward_calls": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "Pairing does not observe model execution"
+    },
+    "visual_overlap": {
+      "status": "unverified",
+      "reason": "Structural connectivity does not prove visual overlap"
+    }
+  }
+}

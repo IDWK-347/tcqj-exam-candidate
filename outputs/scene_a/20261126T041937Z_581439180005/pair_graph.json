@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "run_id": "20261126T041937Z_581439180005",
+  "config_semantic_hash": "31791d5e5d03b9d442b92551f6c5f9ba30f6f96ce145e56604c2a74a2a56fd60",
+  "manifest_sha256": "4a7c510d5da4fa845c516767abaeb0b8ac801ae49b4cfd5c3e2b902ea8eb7921",
+  "processed_pixel_hash": "09c9c0d91d206e689ecb016db888a9d230b90ca3fc709f564345ba413ce4f859",
+  "pair_graph": {
+    "schema_version": 1,
+    "nodes": [
+      "01.png",
+      "02.png"
+    ],
+    "edges": [
+      {
+        "id_a": "01.png",
+        "id_b": "02.png",
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "basis": "complete_all_unordered_pairs"
+      }
+    ],
+    "strategy_parameters": {
+      "strategy": "complete"
+    },
+    "directed_order_policy": "complete_manifest_forward_block_then_reverse_v1",
+    "symmetrize": true,
+    "graph_hash": "67284398e1288bf4c8bddef4f489a3ad16c12c434850ff3d38c10c5681c2227f",
+    "connected_components": [
+      [
+        "01.png",
+        "02.png"
+      ]
+    ],
+    "logical_edge_count": 1,
+    "directed_item_count": 2,
+    "directed_items": [
+      {
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "source": "02.png",
+        "target": "01.png"
+      },
+      {
+        "pair_id": "pair_fd7a0ea6ed9347bbadadaba723291b7385099e28e437ba0d97d005434439a6ab",
+        "source": "01.png",
+        "target": "02.png"
+      }
+    ],
+    "actual_model_forward_calls": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "Pairing does not observe model execution"
+    },
+    "visual_overlap": {
+      "status": "unverified",
+      "reason": "Structural connectivity does not prove visual overlap"
+    }
+  }
+}
