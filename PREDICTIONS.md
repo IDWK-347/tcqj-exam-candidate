@@ -72,7 +72,8 @@ dry-run 通过只证明**资源与参数校验**通过，不证明推理或几�
 
 ### 实际观察
 
-- run_id：`20261126T042248Z_3d7558c62c88`，`status: succeeded`，退出码 0
+- run_id：`20261126T042248Z_3d7558c62c88`，`status: succeeded`
+  （产物未记录进程退出码，以 `run_status.status` 为准）
 - 10 个阶段全部 `succeeded`，总耗时 18.04 s
 - `pair_graph`：`nodes=2`、`logical_edge_count=1`、`directed_item_count=2`，
   连通分量 `[['01.png','02.png']]`
@@ -517,7 +518,7 @@ H3 不支持。
 - allocator 峰值：3.259 GiB；
 - `final_losses=[0.000431214, 0.000251814]`（B0 为 0.022824 / 0.885533）；
 - 焦距范围：599.63–646.89，相对跨度 7.59%；
-- 相机中心最大两两距离（统一口径：`cameras.json` 的 `T_world_from_camera` 平移向量为世界坐标相机中心；保留 3 位小数）：**0.103**（B0 0.218；4 位小数为 0.1034）；
+- 相机中心最大两两距离（口径：由 `cameras.json` 的 `T_world_from_camera` 按 `C = −Rᵀt` 换算相机中心；保留 3 位小数）：**0.102**（B0 0.218；4 位小数为 0.1016）；
 - 正确对极指标（`tools/measure_epipolar.py`）：01–02 **1.780**（B0 0.254）、
   04–05 **2.250**（B0 0.257）、**01–07 8.642（B0 2.166，全面变差）**。
 

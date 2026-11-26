@@ -30,8 +30,8 @@ python3 tools/inspect_run.py outputs/scene_a/20261126T042248Z_3d7558c62c88
 | 项目 | 值 | 来源 |
 |---|---|---|
 | run_id | `20261126T042248Z_3d7558c62c88` | 输出目录名 / `run_manifest.json` → `run_id` |
-| 开始时间（UTC） | `2026-11-26T04:22:48.475657+00:00` | `run_manifest.json` → `started_at_utc` |
-| 结束时间（UTC） | `2026-11-26T04:23:06.971832+00:00` | `run_manifest.json` → `ended_at_utc` |
+| 开始时间（UTC） | `2026-11-26T04:22:48.463342+00:00` | `run_manifest.json` → 顶层 `started_at_utc` |
+| 结束时间（UTC） | `2026-11-26T04:23:06.984911+00:00` | `run_manifest.json` → 顶层 `ended_at_utc` |
 | 最终状态 | `succeeded` | `run_status.json` / `run_manifest.json` |
 | 进程退出码 | 未记录（产物中无退出码字段；完成与否以 `run_status.status` 为准） | —— |
 | 权重 SHA256 | `e28f91b4…568eb2` | `preflight.json` / `backend_fingerprint.json` |

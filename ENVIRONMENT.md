@@ -11,7 +11,7 @@
 
 | 项目 | 实测值 | 采集命令 |
 |---|---|---|
-| GPU | Tesla T4，15360 MiB，compute capability (7,5) = sm_75 | `nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv` |
+| GPU | Tesla T4，16384 MiB（`nvidia-smi`；torch 报告可用 15929.56 MiB），compute capability (7,5) = sm_75 | `nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv` |
 | 驱动 | 580.178.04 | 同上 |
 | Python | 3.11.1，`/root/.pyenv/versions/3.11.1/bin/python3` | `python3 -c "import sys; print(sys.version, sys.executable)"` |
 | 虚拟环境 | 无（`VIRTUAL_ENV` 为空，`python3` 解析到 pyenv shims） | `which -a python3; echo $VIRTUAL_ENV` |

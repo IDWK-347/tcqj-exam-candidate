@@ -38,11 +38,11 @@ python3 tools/inspect_run.py outputs/<scene>/<run_id>
 
 | ID | 唯一变量 | 命令 | 与基线的关系 |
 |---|---|---|---|
-| E0 | 无（基线） | `python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml` | 基线 |
-| E1 | `backend.subsample` 8 → 16 | `python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.subsample=16` | 采样更稀 |
-| E2 | `backend.subsample` 8 → 4 | `python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.subsample=4` | 采样更密 |
-| E3 | `backend.matching_conf_thr` 0.0 → 5.0 | `python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.matching_conf_thr=5.0` | 低置信对改走 DUSt3R 分支 |
-| E4 | `backend.matching_conf_thr` 0.0 → 1.5 | `python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.matching_conf_thr=1.5` | 轻度过滤 |
+| E0 | 无（基线） | `LD_LIBRARY_PATH= python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml` | 基线 |
+| E1 | `backend.subsample` 8 → 16 | `LD_LIBRARY_PATH= python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.subsample=16` | 采样更稀 |
+| E2 | `backend.subsample` 8 → 4 | `LD_LIBRARY_PATH= python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.subsample=4` | 采样更密 |
+| E3 | `backend.matching_conf_thr` 0.0 → 5.0 | `LD_LIBRARY_PATH= python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.matching_conf_thr=5.0` | 低置信对改走 DUSt3R 分支 |
+| E4 | `backend.matching_conf_thr` 0.0 → 1.5 | `LD_LIBRARY_PATH= python3 scripts/run_reconstruction.py --config configs/scenes/scene_a.yaml --set backend.matching_conf_thr=1.5` | 轻度过滤 |
 
 > E1/E2 与 E3/E4 各自独立；**不要在一次命令里同时改 subsample 和 thr**。
 > 执行顺序建议：E0 → E1 → E2 → E3 → E4（先建立基线，再动一个维度）。
