@@ -4,3 +4,6 @@ checkpoints/
 *.bak
 __pycache__/
 *.pyc
+.venv/
+venv/
+*.pth
