@@ -56,7 +56,7 @@ site-packages 只有 pip/setuptools，无法启动；重建成本高于收益。
 
 | 须知条目 | 要求 | 本工程状态 | 证据 |
 |---|---|---|---|
-| 1. 克隆并建分支 | 从 `main` 拉出 `submission/<名字>` | ✅ 当前分支 `submission/peixinnan`（分支点 `ac0ba43`；已推到 fork，以分支 tip 为准） | `git branch -vv` / `git ls-remote --heads fork` |
+| 1. 克隆并建分支 | 从 `main` 拉出 `submission/<名字>` | ✅ 当前分支 `submission/peixinnan`（基于 `origin/main` 的 `2ec74dd`；已推到 fork，以分支 tip 为准） | `git branch -vv` / `git ls-remote --heads fork` |
 | 2. 下载并校验权重 | 2754910614 字节；SHA256 `e28f91…568eb2`；放入 `checkpoints/` | ✅ 两项同时吻合 | `ENVIRONMENT.md` §3 |
 | 3. 改 `assets/weights.json` 的路径 | 须知示例写的是绝对路径 | ⚠️ 按代码契约改为**相对路径**，解析结果仍是 `/workspace/checkpoints/…`；`sha256` 字段未改 | `entry.py:50-52`；`ENVIRONMENT.md` §4.2 |
 
